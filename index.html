@@ -83,19 +83,20 @@
       font-size: 1rem;
       margin-top: 10px;
       font-weight: 400;
-      text-align: right;
+      text-align: center;
       direction: rtl;
     }
 
     .message ul {
       list-style-type: "— ";
-      padding-left: 1em;
+      padding-left: 0;
+      list-style-position: inside;
     }
 
     .button {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 12px;
       margin: 1rem auto;
       padding: 1rem 1.5rem;
@@ -110,11 +111,13 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
       cursor: pointer;
       font-size: 1rem;
+      text-align: center;
     }
 
     .button img {
-      width: 24px;
-      height: 24px;
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
     }
 
     .twitter { color: #000000; }
@@ -135,6 +138,15 @@
     .hidden-links {
       display: none;
       margin-top: 10px;
+    }
+
+    .hidden-links .button {
+      justify-content: center;
+    }
+
+    .button.more {
+      justify-content: center;
+      color: #3b82f6;
     }
 
     @media (max-width: 480px) {
@@ -170,18 +182,18 @@
     </div>
 
     <a href="https://x.com/ry7yy" target="_blank" class="button twitter">
-      <img src="twitter.png" alt="تويتر"> Twitter
+      <img src="twitter.png" alt="Twitter"> Twitter
     </a>
 
     <a href="https://t.me/RY7DY" target="_blank" class="button telegram">
-      <img src="telegram.png" alt="تيليقرام"> Telegram
+      <img src="telegram.png" alt="Telegram"> Telegram
     </a>
 
     <a href="https://www.snapchat.com/add/dy.q?share_id=o5wVdKfCTAiy0ORkjfKKBA&locale=ar_SA@calendar=gregorian" target="_blank" class="button snapchat">
-      <img src="snapchat.png" alt="سناب شات"> Snapchat
+      <img src="snapchat.png" alt="Snapchat"> Snapchat
     </a>
 
-    <button class="button" onclick="toggleLinks()">المزيد</button>
+    <button class="button more" onclick="toggleLinks()">المزيد</button>
 
     <div class="hidden-links" id="more-links">
       <a href="https://live.kwikmotion.com/sbrksaquranradiolive/ksaquranradio/chunks.m3u8" target="_blank" class="button">
@@ -193,11 +205,7 @@
   <script>
     function toggleLinks() {
       var links = document.getElementById("more-links");
-      if (links.style.display === "none" || links.style.display === "") {
-        links.style.display = "block";
-      } else {
-        links.style.display = "none";
-      }
+      links.style.display = (links.style.display === "none" || links.style.display === "") ? "block" : "none";
     }
   </script>
 </body>
