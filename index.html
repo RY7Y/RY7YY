@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ry7yy.dev</title>
   <style>
+    @font-face {
+      font-family: 'MontserratArabic';
+      src: url('Montserrat-Arabic-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     :root {
       --primary-dark: #1e293b;
       --primary-light: #475569;
@@ -19,7 +26,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-family: 'MontserratArabic', sans-serif;
     }
 
     body {
@@ -88,12 +95,11 @@
     .button {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
+      justify-content: flex-start;
+      gap: 12px;
       margin: 1rem auto;
-      padding: 1rem 2rem;
+      padding: 1rem 1.5rem;
       background: var(--primary-light);
-      color: var(--text-light);
       border: none;
       border-radius: 12px;
       text-decoration: none;
@@ -103,12 +109,17 @@
       backdrop-filter: var(--blur-effect);
       box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
       cursor: pointer;
+      font-size: 1rem;
     }
 
     .button img {
       width: 24px;
       height: 24px;
     }
+
+    .twitter { color: #000000; }
+    .telegram { color: #229ED9; }
+    .snapchat { color: #FFFC00; }
 
     .button:hover {
       background: var(--primary-dark);
@@ -141,7 +152,7 @@
       }
 
       .button {
-        padding: 0.8rem 1.5rem;
+        padding: 0.8rem 1.2rem;
       }
     }
   </style>
@@ -158,16 +169,16 @@
       </ul>
     </div>
 
-    <a href="https://x.com/ry7yy" target="_blank" class="button">
-      <img src="twitter.png" alt="Twitter"> Twitter
+    <a href="https://x.com/ry7yy" target="_blank" class="button twitter">
+      <img src="twitter.png" alt="تويتر"> Twitter
     </a>
 
-    <a href="https://t.me/RY7DY" target="_blank" class="button">
-      <img src="telegram.png" alt="Telegram"> Telegram
+    <a href="https://t.me/RY7DY" target="_blank" class="button telegram">
+      <img src="telegram.png" alt="تيليقرام"> Telegram
     </a>
 
-    <a href="https://www.snapchat.com/add/dy.q?share_id=o5wVdKfCTAiy0ORkjfKKBA&locale=ar_SA@calendar=gregorian" target="_blank" class="button">
-      <img src="snapchat.png" alt="Snapchat"> Snapchat
+    <a href="https://www.snapchat.com/add/dy.q?share_id=o5wVdKfCTAiy0ORkjfKKBA&locale=ar_SA@calendar=gregorian" target="_blank" class="button snapchat">
+      <img src="snapchat.png" alt="سناب شات"> Snapchat
     </a>
 
     <button class="button" onclick="toggleLinks()">المزيد</button>
