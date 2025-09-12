@@ -1,168 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ry7yy.dev</title>
-    <style>
-        :root {
-            --primary-dark: #1e293b;
-            --primary-light: #475569;
-            --secondary: #94a3b8;
-            --background-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            --card-background: rgba(71, 85, 105, 0.2);
-            --blur-effect: blur(10px);
-            --text-light: rgba(255, 255, 255, 0.9);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ry7yy.dev</title>
+  <style>
+    :root {
+      --primary-dark: #1e293b;
+      --primary-light: #475569;
+      --secondary: #94a3b8;
+      --background-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      --card-background: rgba(71, 85, 105, 0.2);
+      --blur-effect: blur(10px);
+      --text-light: rgba(255, 255, 255, 0.9);
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
 
-        body {
-            min-height: 100vh;
-            background: var(--background-gradient);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
+    body {
+      min-height: 100vh;
+      background: var(--background-gradient);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
 
-        .container {
-            background: var(--card-background);
-            backdrop-filter: var(--blur-effect);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-            max-width: 450px;
-            width: 100%;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .container {
+      background: var(--card-background);
+      backdrop-filter: var(--blur-effect);
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-        .container:hover {
-            transform: scale(1.03);
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
-        }
+    .container:hover {
+      transform: scale(1.03);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    }
 
-        img {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin-bottom: 1.5rem;
-            border: 4px solid var(--secondary);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.5rem;
+      border: 4px solid var(--secondary);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
 
-        img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
-        }
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    }
 
-        h1 {
-            color: var(--text-light);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
+    h1 {
+      color: var(--text-light);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
 
-        .message {
-            color: var(--text-light);
-            font-size: 1rem;
-            margin-top: 10px;
-            font-weight: 400;
-        }
+    .message {
+      color: var(--text-light);
+      font-size: 1rem;
+      margin-top: 10px;
+      font-weight: 400;
+      text-align: right;
+      direction: rtl;
+    }
 
-        .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin: 1rem auto;
-            padding: 1rem 2rem;
-            background: var(--primary-light);
-            color: var(--text-light);
-            border: none;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            width: 100%;
-            transition: all 0.3s ease;
-            backdrop-filter: var(--blur-effect);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-            cursor: pointer;
-        }
+    .message ul {
+      list-style-type: "— ";
+      padding-left: 1em;
+    }
 
-        .button:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 1rem auto;
+      padding: 1rem 2rem;
+      background: var(--primary-light);
+      color: var(--text-light);
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      width: 100%;
+      transition: all 0.3s ease;
+      backdrop-filter: var(--blur-effect);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+    }
 
-        .button:active {
-            transform: translateY(0);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
+    .button img {
+      width: 24px;
+      height: 24px;
+    }
 
-        .hidden-links {
-            display: none;
-            margin-top: 10px;
-        }
+    .button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
 
-        @media (max-width: 480px) {
-            .container {
-                padding: 2rem;
-            }
+    .button:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
 
-            img {
-                width: 140px;
-                height: 140px;
-            }
+    .hidden-links {
+      display: none;
+      margin-top: 10px;
+    }
 
-            h1 {
-                font-size: 1.2rem;
-            }
+    @media (max-width: 480px) {
+      .container {
+        padding: 2rem;
+      }
 
-            .button {
-                padding: 0.8rem 1.5rem;
-            }
-        }
-    </style>
+      img {
+        width: 140px;
+        height: 140px;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      .button {
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="IMG_3084.png" alt="Profile Picture">
-        <h1>𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</h1>
-        <p class="message">مطور تطبيقات\n مهتم بالجلبريك وتطبيقات IPA</p>
+  <div class="container">
+    <img src="IMG_3084.png" alt="Profile Picture">
+    <h1>𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</h1>
 
-        <a href="https://x.com/ry7yy" target="_blank" class="button">Twitter</a>
-
-        <a href="https://t.me/RY7DY" target="_blank" class="button">Telegram</a>
-        
-        <a href="https://www.snapchat.com/add/dy.q?share_id=o5wVdKfCTAiy0ORkjfKKBA&locale=ar_SA@calendar=gregorian" target="_blank" class="button">Snapchat</a>
-
-        <button class="button" onclick="toggleLinks()">المزيد</button>
-
-        <div class="hidden-links" id="more-links">
-
-            <a href="https://live.kwikmotion.com/sbrksaquranradiolive/ksaquranradio/chunks.m3u8" target="_blank" class="button">إذاعة القرآن</a>
-        </div>
+    <div class="message">
+      <ul>
+        <li>مطور تطبيقات</li>
+        <li>مهتم بالجلبريك وتطبيقات IPA</li>
+      </ul>
     </div>
 
-    <script>
-        function toggleLinks() {
-            var links = document.getElementById("more-links");
-            if (links.style.display === "none" || links.style.display === "") {
-                links.style.display = "block";
-            } else {
-                links.style.display = "none";
-            }
-        }
-    </script>
+    <a href="https://x.com/ry7yy" target="_blank" class="button">
+      <img src="twitter.png" alt="Twitter"> Twitter
+    </a>
+
+    <a href="https://t.me/RY7DY" target="_blank" class="button">
+      <img src="telegram.png" alt="Telegram"> Telegram
+    </a>
+
+    <a href="https://www.snapchat.com/add/dy.q?share_id=o5wVdKfCTAiy0ORkjfKKBA&locale=ar_SA@calendar=gregorian" target="_blank" class="button">
+      <img src="snapchat.png" alt="Snapchat"> Snapchat
+    </a>
+
+    <button class="button" onclick="toggleLinks()">المزيد</button>
+
+    <div class="hidden-links" id="more-links">
+      <a href="https://live.kwikmotion.com/sbrksaquranradiolive/ksaquranradio/chunks.m3u8" target="_blank" class="button">
+        📻 إذاعة القرآن
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function toggleLinks() {
+      var links = document.getElementById("more-links");
+      if (links.style.display === "none" || links.style.display === "") {
+        links.style.display = "block";
+      } else {
+        links.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
