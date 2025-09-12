@@ -1,9 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ry7yy.dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</title>
+  <meta name="description" content="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 - مطور تطبيقات" />
+  <meta property="og:title" content="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸" />
+  <meta property="og:description" content="جميع حساباتي وروابطي بمكان واحد" />
+  <meta name="color-scheme" content="light dark" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
     @font-face {
       font-family: 'MontserratArabic';
@@ -13,200 +20,279 @@
     }
 
     :root {
-      --primary-dark: #1e293b;
-      --primary-light: #475569;
-      --secondary: #94a3b8;
-      --background-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      --card-background: rgba(71, 85, 105, 0.2);
-      --blur-effect: blur(10px);
-      --text-light: rgba(255, 255, 255, 0.9);
+      --bg: #0d1117;
+      --fg: #ffffff;
+      --muted: #94a3b8;
+      --soft: rgba(255, 255, 255, 0.05);
+      --card: #161b22;
+      --border: #30363d;
+      --ring: rgba(255, 255, 255, 0.1);
+      --link: #58a6ff;
+      --accent: #2fa6ff;
+      --accent-contrast: #000000;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
+    *, *::before, *::after {
       box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
       font-family: 'MontserratArabic', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    body {
-      min-height: 100vh;
-      background: var(--background-gradient);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .container {
-      background: var(--card-background);
-      backdrop-filter: var(--blur-effect);
-      padding: 3rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-      max-width: 450px;
-      width: 100%;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .container:hover {
-      transform: scale(1.03);
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+    a {
+      color: var(--link);
+      text-decoration: none;
     }
 
     img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 1.5rem;
-      border: 4px solid var(--secondary);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      max-width: 100%;
+      display: block;
     }
 
-    img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px 16px;
     }
 
-    h1 {
-      color: var(--text-light);
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      letter-spacing: 1px;
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 28px var(--ring);
     }
 
-    .message {
-      color: var(--text-light);
-      font-size: 1rem;
-      margin-top: 10px;
-      font-weight: 400;
-      text-align: center;
-      direction: rtl;
-    }
-
-    .message ul {
-      list-style-type: "— ";
-      padding-left: 0;
-      list-style-position: inside;
-    }
-
-    .button {
+    .brand {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin: 1rem auto;
-      padding: 1rem 1.5rem;
-      background: var(--primary-light);
-      border: none;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      width: 100%;
-      transition: all 0.3s ease;
-      backdrop-filter: var(--blur-effect);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-      cursor: pointer;
-      font-size: 1rem;
+      gap: 10px;
+      color: var(--muted);
+      font-weight: 800;
+      letter-spacing: .3px;
+      margin-bottom: 6px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: .22;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 740px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    .avatar {
+      width: 176px;
+      height: 176px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      margin-inline: auto;
+    }
+
+    .name {
+      margin: 6px 0 2px;
+      font-size: clamp(26px, 4.4vw, 36px);
+      font-weight: 800;
+      letter-spacing: .2px;
       text-align: center;
     }
 
-    .button img {
-      width: 32px;
-      height: 32px;
-      object-fit: contain;
+    .role {
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: clamp(15px, 2.4vw, 18px);
+      text-align: center;
     }
 
-    .twitter { color: #000000; }
-    .telegram { color: #229ED9; }
-    .snapchat { color: #FFFC00; }
-
-    .button:hover {
-      background: var(--primary-dark);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    .intro {
+      margin: 0 auto 14px;
+      padding: 12px 14px;
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-weight: 600;
+      max-width: 60ch;
+      text-align: center;
     }
 
-    .button:active {
-      transform: translateY(0);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-    }
-
-    .hidden-links {
-      display: none;
-      margin-top: 10px;
-    }
-
-    .hidden-links .button {
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 10px 0 14px;
       justify-content: center;
     }
 
-    .button.more {
-      justify-content: center;
-      color: #3b82f6;
+    .social a {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      color: var(--link);
+      background: var(--soft);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-size: 20px;
+      transition: transform 0.2s ease, background 0.2s;
     }
 
-    @media (max-width: 480px) {
-      .container {
-        padding: 2rem;
-      }
+    .social a:hover {
+      transform: translateY(-2px);
+      background: var(--border);
+    }
 
-      img {
-        width: 140px;
-        height: 140px;
-      }
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 16px auto;
+      border-radius: 1px;
+      max-width: 720px;
+    }
 
-      h1 {
-        font-size: 1.2rem;
-      }
+    .link-list {
+      display: grid;
+      gap: 10px;
+      margin: 14px auto 6px;
+      max-width: 520px;
+      justify-items: center;
+    }
 
-      .button {
-        padding: 0.8rem 1.2rem;
-      }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--fg);
+      font-weight: 800;
+      letter-spacing: .2px;
+      transition: transform .12s ease, background-color .2s ease, border-color .2s ease;
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn i {
+      opacity: .95;
+    }
+
+    .section-label {
+      margin: 18px 0 8px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .chip {
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: var(--soft);
+      color: var(--fg);
+    }
+
+    footer {
+      padding: 26px 0 34px;
+      color: var(--muted);
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="IMG_3084.png" alt="Profile Picture">
-    <h1>𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</h1>
+  <main>
+    <div class="wrap">
+      <section class="card" aria-label="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span>𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</span>
+        </div>
 
-    <div class="message">
-      <ul>
-        <li>مطور تطبيقات</li>
-        <li>مهتم بالجلبريك وتطبيقات IPA</li>
-      </ul>
+        <div class="hero">
+          <div style="display: grid; place-items: center">
+            <img class="avatar" src="IMG_3084.png" alt="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸" />
+          </div>
+
+          <div>
+            <h1 class="name">𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</h1>
+            <p class="role">مطور تطبيقات ومواقع إلكترونية</p>
+            <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا ملك 👑</p>
+
+            <nav class="social" aria-label="روابط اجتماعية">
+              <a href="https://t.me/RY7DY" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+              <a href="https://instagram.com/RY7YY" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://snapchat.com/add/dy.q" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+              <a href="https://x.com/ry7yy" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+            </nav>
+
+            <div class="divider" role="separator" aria-hidden="true"></div>
+
+            <nav class="link-list" aria-label="روابط رئيسية">
+              <a class="btn" href="https://t.me/mr_rives2" aria-label="قناة تلجرام">
+                <i class="fab fa-telegram"></i>
+                <span>قناتي على التليجرام</span>
+              </a>
+            </nav>
+
+            <p class="section-label">مهارات</p>
+            <div class="skills">
+              <span class="chip"><i class="fab fa-apple"></i> ‎Swift</span>
+              <span class="chip"><i class="fab fa-html5"></i> ‎HTML</span>
+              <span class="chip"><i class="fab fa-css3-alt"></i> ‎CSS</span>
+              <span class="chip"><i class="fab fa-python"></i> ‎Python</span>
+              <span class="chip"><i class="fas fa-cloud"></i> ‎APIs</span>
+              <span class="chip"><i class="fas fa-microchip"></i> ‎Linux</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</div>
+      </footer>
     </div>
-
-    <a href="https://x.com/ry7yy" target="_blank" class="button twitter">
-      <img src="twitter.png" alt="Twitter"> Twitter
-    </a>
-
-    <a href="https://t.me/RY7DY" target="_blank" class="button telegram">
-      <img src="telegram.png" alt="Telegram"> Telegram
-    </a>
-
-    <a href="https://www.snapchat.com/add/dy.q?share_id=o5wVdKfCTAiy0ORkjfKKBA&locale=ar_SA@calendar=gregorian" target="_blank" class="button snapchat">
-      <img src="snapchat.png" alt="Snapchat"> Snapchat
-    </a>
-
-    <button class="button more" onclick="toggleLinks()">المزيد</button>
-
-    <div class="hidden-links" id="more-links">
-      <a href="https://live.kwikmotion.com/sbrksaquranradiolive/ksaquranradio/chunks.m3u8" target="_blank" class="button">
-        📻 إذاعة القرآن
-      </a>
-    </div>
-  </div>
-
-  <script>
-    function toggleLinks() {
-      var links = document.getElementById("more-links");
-      links.style.display = (links.style.display === "none" || links.style.display === "") ? "block" : "none";
-    }
-  </script>
+  </main>
 </body>
 </html>
