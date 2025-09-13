@@ -107,30 +107,78 @@ h1 {
 }
 
 /* 🎨 أزرار سوشيال ميديا خاصة */
+<!-- ضع هذا داخل <style> الموجود عندك -->
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 14px;
+  justify-content: center;
+}
+
 .social a {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
-  border-radius: 12px;
+  border-radius: 14px;
+  font-size: 22px;
+  background: var(--soft);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 transparent;
+}
+
+.social a::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social a:hover::before {
+  opacity: 1;
+}
+
+.social a i {
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.social a:hover i {
+  transform: scale(1.25);
+}
+
+/* ألوان مخصصة لكل منصة */
+.social a[aria-label="Telegram"] {
+  background-color: #229ED9;
   color: #fff;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: transform 0.2s ease;
-  border: 2px solid var(--border);
+  box-shadow: 0 0 12px #229ED9;
 }
 
-.social a:hover {
-  transform: scale(1.1);
+.social a[aria-label="Instagram"] {
+  background: linear-gradient(135deg, #E1306C, #833AB4);
+  color: #fff;
+  box-shadow: 0 0 12px #e1306c;
 }
 
-/* ألوان منصات */
-.social a.telegram { background: #2fa6ff; }
-.social a.instagram { background: #d62976; }
-.social a.snapchat  { background: #fffc00; color: #000; }
-.social a.twitter   { background: #000000; }
-.social a.github    { background: #24292e; }
+.social a[aria-label="Snapchat"] {
+  background-color: #FFFC00;
+  color: #000;
+  box-shadow: 0 0 12px #FFFC00;
+}
+
+.social a[aria-label="Twitter/X"] {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 12px #999;
+}
 
 footer {
   margin-top: 40px;
