@@ -211,6 +211,11 @@
 
 <div class="visits-counter" id="visitorCounter">جاري تحميل عدد الزوار ...</div>
 
+<!-- ✅ رمز الـ VisitorAPI المميز -->
+<div class="visitor-id" style="margin-top: 10px; color: #999; font-size: 14px; text-align: center;">
+  رمز التتبع الخاص بك: <strong style="color: #555;">VRDPUBq1jNcXp39CWuEY</strong>
+</div>
+
 <footer>
   <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
 </footer>
@@ -218,18 +223,20 @@
 </main>
 
 <script>
-  const endpoint = "https://api.npoint.io/6f6193ad50348c4e563b"; // ← استبدل هذا برابطك الفعلي
+  const endpoint = "https://api.npoint.io/6f6193ad50348c4e563b"; // ← رابط npoint الخاص بك
 
   async function updateVisits() {
     const counter = document.getElementById("visitorCounter");
 
     try {
-      // جلب البيانات الحالية
+      // ✅ جلب العدد الحالي
       const res = await fetch(endpoint);
       const data = await res.json();
-      const newVisits = (data.visits || 0) + 1;
 
-      // تحديث البيانات في نفس الرابط
+      // ✅ زيادة العدد
+      const newVisits = (parseInt(data.visits) || 0) + 1;
+
+      // ✅ إرسال العدد الجديد
       await fetch(endpoint, {
         method: "PUT",
         headers: {
@@ -238,6 +245,7 @@
         body: JSON.stringify({ visits: newVisits })
       });
 
+      // ✅ عرض العدد
       counter.textContent = `عدد الزوار حتى الآن: ${newVisits.toLocaleString()}`;
     } catch (err) {
       console.error("Visit counter error:", err);
