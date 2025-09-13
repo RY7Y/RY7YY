@@ -166,7 +166,7 @@
     <div class="wrap">
       <section class="card" aria-label="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸">
         <div class="brand">
-          <span class="dot" aria-hidden="true"></span>
+          <span class="dot"></span>
           <span>𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</span>
         </div>
 
@@ -180,14 +180,14 @@
             <p class="role">مطور تطبيقات ومواقع إلكترونية</p>
             <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا عسل 👑</p>
 
-            <nav class="social" aria-label="روابط اجتماعية">
+            <nav class="social">
               <a href="https://t.me/RY7DY"><i class="fab fa-telegram"></i></a>
               <a href="https://instagram.com/RY3YY"><i class="fab fa-instagram"></i></a>
               <a href="https://snapchat.com/add/dy.q"><i class="fab fa-snapchat-ghost"></i></a>
               <a href="https://x.com/ry7yy"><i class="fab fa-x-twitter"></i></a>
             </nav>
 
-            <div class="divider" role="separator"></div>
+            <div class="divider"></div>
 
             <nav class="link-list">
               <a class="btn" href="https://t.me/RY7YY">
@@ -209,7 +209,7 @@
         </div>
       </section>
 
-      <div class="visits-counter" id="visitorCounter">عدد الزوار: 0</div>
+      <div class="visits-counter" id="visitorCounter">جاري تحميل عدد الزوار ...</div>
 
       <footer>
         <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
@@ -220,11 +220,12 @@
   <script>
     window.addEventListener("DOMContentLoaded", () => {
       const counter = document.getElementById('visitorCounter');
-      fetch('https://api.countapi.xyz/hit/ry7yy.github.io/visits')
+      fetch('https://api.countapi.xyz/hit/ry7yy.github.io/RY7YY')
         .then(res => res.json())
         .then(data => {
           counter.textContent = `عدد الزوار حتى الآن: ${data.value.toLocaleString()}`;
-        }).catch(() => {
+        })
+        .catch(() => {
           counter.textContent = "تعذر تحميل عدد الزوار ❌";
         });
     });
