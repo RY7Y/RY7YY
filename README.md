@@ -1,1 +1,1 @@
-# RY7YY
+https://ry7y.github.io/RY7YY/
