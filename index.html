@@ -9,10 +9,10 @@
   <meta property="og:description" content="جميع حساباتي وروابطي بمكان واحد" />
   <meta name="color-scheme" content="light dark" />
 
-  <!-- FontAwesome -->
+  <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- خط مخصص -->
+  <!-- Custom Font -->
   <style>
     @font-face {
       font-family: 'MontserratArabic';
@@ -22,7 +22,7 @@
     }
   </style>
 
-  <!-- تنسيقات الصفحة -->
+  <!-- Main Styling -->
   <style>
     :root {
       --bg: #0d1117;
@@ -33,21 +33,23 @@
       --border: #30363d;
       --ring: rgba(255, 255, 255, 0.1);
       --link: #58a6ff;
-      --accent: #2fa6ff;
     }
 
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
       margin: 0;
-      padding: 0;
       font-family: 'MontserratArabic', sans-serif;
       background: linear-gradient(-45deg, #0d1117, #161b22, #0d1117, #1e293b);
       background-size: 400% 400%;
       animation: bg-animate 15s ease infinite;
       color: var(--fg);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     @keyframes bg-animate {
@@ -59,6 +61,11 @@
     a {
       color: var(--link);
       text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .wrap {
@@ -75,71 +82,110 @@
       box-shadow: 0 8px 28px var(--ring);
     }
 
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    @media (max-width: 740px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
     .avatar {
       width: 176px;
       height: 176px;
       border-radius: 50%;
       object-fit: cover;
+      background: var(--soft);
       border: 1px solid var(--border);
-      display: block;
       margin-inline: auto;
     }
 
     .name {
-      margin: 12px 0 2px;
+      margin: 6px 0 2px;
       font-size: clamp(26px, 4.4vw, 36px);
       font-weight: 800;
       letter-spacing: .2px;
       text-align: center;
     }
 
-    .role, .intro {
-      text-align: center;
+    .role {
+      margin: 0 0 10px;
       color: var(--muted);
-      font-weight: 600;
+      font-weight: 700;
+      font-size: clamp(15px, 2.4vw, 18px);
+      text-align: center;
     }
 
     .intro {
-      background: var(--soft);
+      margin: 0 auto 14px;
       padding: 12px 14px;
-      border-radius: 12px;
+      background: var(--soft);
       border: 1px solid var(--border);
-      margin: 10px auto 14px;
+      border-radius: 12px;
+      font-weight: 600;
       max-width: 60ch;
+      text-align: center;
     }
 
     .social {
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
       gap: 10px;
-      margin-bottom: 20px;
+      margin: 10px 0 14px;
+      justify-content: center;
     }
 
     .social a {
-      width: 52px;
-      height: 52px;
+      width: 44px;
+      height: 44px;
       display: grid;
       place-items: center;
-      border-radius: 14px;
+      color: #fff;
       background: var(--soft);
       border: 1px solid var(--border);
-      position: relative;
-      transition: background 0.3s ease;
+      border-radius: 12px;
+      font-size: 20px;
+      transition: transform 0.2s ease, background 0.2s;
     }
 
     .social a i {
-      font-size: 24px;
-      transition: transform 0.4s ease;
+      transition: transform 0.4s ease-in-out;
     }
 
+    /* ✅ حركة مخصصة لكل أيقونة عند المرور */
     .social a:hover i {
-      animation: pulseIcon 0.6s infinite alternate;
+      animation: rotateIcon 0.8s ease-in-out infinite alternate;
     }
 
-    /* حركة احترافية للآيقونة فقط */
-    @keyframes pulseIcon {
-      0%   { transform: scale(1) rotate(0deg); }
-      100% { transform: scale(1.25) rotate(5deg); }
+    @keyframes rotateIcon {
+      from {
+        transform: scale(1) rotate(0deg);
+      }
+      to {
+        transform: scale(1.3) rotate(15deg);
+      }
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--border);
+      margin: 16px auto;
+      border-radius: 1px;
+      max-width: 720px;
+    }
+
+    .link-list {
+      display: grid;
+      gap: 10px;
+      margin: 14px auto 6px;
+      max-width: 520px;
+      justify-items: center;
     }
 
     .btn {
@@ -147,16 +193,18 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 24px;
-      font-weight: 800;
+      min-height: 52px;
+      width: 100%;
+      border-radius: 12px;
       background: #000;
       color: #0ff;
-      border-radius: 14px;
+      font-weight: 800;
+      letter-spacing: .2px;
+      transition: all 0.3s ease;
+      padding: 12px 16px;
+      text-align: center;
       border: 2px solid #0ff;
       box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
-      text-align: center;
-      width: 100%;
-      transition: all 0.3s ease;
     }
 
     .btn:hover {
@@ -164,29 +212,23 @@
       box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
     }
 
-    .link-list {
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
     .section-label {
-      margin-top: 30px;
-      font-size: 16px;
+      margin: 18px 0 8px;
+      font-size: 14px;
       color: var(--muted);
-      text-align: center;
       font-weight: 800;
+      text-align: center;
     }
 
     .skills {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 14px;
+      justify-content: center;
     }
 
     .chip {
-      padding: 6px 14px;
+      padding: 6px 10px;
       border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
@@ -195,17 +237,17 @@
       color: var(--fg);
     }
 
-    .chip:nth-child(1) { background-color: #ff2e2e; color: #fff; }     /* Swift */
-    .chip:nth-child(2) { background-color: #f16529; color: #fff; }     /* HTML */
-    .chip:nth-child(3) { background-color: #264de4; color: #fff; }     /* CSS */
-    .chip:nth-child(4) { background-color: #3572A5; color: #fff; }     /* Python */
-    .chip:nth-child(5) { background-color: #0ea5e9; color: #fff; }     /* APIs */
-    .chip:nth-child(6) { background-color: #6b7280; color: #fff; }     /* Linux */
+    .chip.swift { background: #ff4c4c; color: white; }
+    .chip.html  { background: #e44d26; color: white; }
+    .chip.css   { background: #2965f1; color: white; }
+    .chip.python{ background: #3776ab; color: white; }
+    .chip.apis  { background: #14b8a6; color: white; }
+    .chip.linux { background: #f59e0b; color: black; }
 
     footer {
-      text-align: center;
-      padding: 24px 0;
+      padding: 26px 0 34px;
       color: var(--muted);
+      text-align: center;
     }
   </style>
 </head>
@@ -213,41 +255,46 @@
   <main>
     <div class="wrap">
       <section class="card" aria-label="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸">
+        <div class="hero">
+          <div style="display: grid; place-items: center">
+            <img class="avatar" src="IMG_3084.png" alt="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸" />
+          </div>
+          <div>
+            <h1 class="name">𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</h1>
+            <p class="role">مطور تطبيقات ومواقع إلكترونية</p>
+            <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا عسل 👑</p>
 
-        <img class="avatar" src="IMG_3084.png" alt="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸" />
-        <h1 class="name">D.ZHRANI</h1>
-        <p class="role">مطور تطبيقات ومواقع إلكترونية</p>
-        <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا عسل 👑</p>
+            <nav class="social" aria-label="روابط اجتماعية">
+              <a href="https://x.com/ry7yy" style="background-color: #000;"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://snapchat.com/add/dy.q" style="background-color: #FFFC00; color: #000;"><i class="fab fa-snapchat-ghost"></i></a>
+              <a href="https://instagram.com/RY3YY" style="background: linear-gradient(135deg, #E1306C, #833AB4);"><i class="fab fa-instagram"></i></a>
+              <a href="https://t.me/RY7DY" style="background-color: #229ED9;"><i class="fab fa-telegram"></i></a>
+            </nav>
 
-        <!-- روابط تواصل -->
-        <nav class="social">
-          <a href="https://t.me/RY7DY" style="background-color: #229ED9;"><i class="fab fa-telegram" style="color: #fff;"></i></a>
-          <a href="https://instagram.com/RY3YY" style="background: linear-gradient(135deg, #E1306C, #833AB4);"><i class="fab fa-instagram" style="color: #fff;"></i></a>
-          <a href="https://snapchat.com/add/dy.q" style="background-color: #FFFC00;"><i class="fab fa-snapchat-ghost" style="color: #000;"></i></a>
-          <a href="https://x.com/ry7yy" style="background-color: #000;"><i class="fab fa-x-twitter" style="color: #fff;"></i></a>
-        </nav>
+            <div class="divider" role="separator" aria-hidden="true"></div>
 
-        <!-- زر رئيسي -->
-        <div class="link-list">
-          <a class="btn" href="https://t.me/RY7YY">
-            <i class="fab fa-telegram"></i>
-            للتواصل تيليقرام
-          </a>
-        </div>
+            <nav class="link-list" aria-label="روابط رئيسية">
+              <a class="btn" href="https://t.me/RY7YY">
+                <i class="fab fa-telegram"></i>
+                <span>للتواصل تيليقرام</span>
+              </a>
+            </nav>
 
-        <!-- المهارات -->
-        <p class="section-label">مهارات</p>
-        <div class="skills">
-          <span class="chip"><i class="fab fa-apple"></i> Swift</span>
-          <span class="chip"><i class="fab fa-html5"></i> HTML</span>
-          <span class="chip"><i class="fab fa-css3-alt"></i> CSS</span>
-          <span class="chip"><i class="fab fa-python"></i> Python</span>
-          <span class="chip"><i class="fas fa-cloud"></i> APIs</span>
-          <span class="chip"><i class="fas fa-microchip"></i> Linux</span>
+            <p class="section-label">مهارات</p>
+            <div class="skills">
+              <span class="chip swift"><i class="fab fa-apple"></i> ‎Swift</span>
+              <span class="chip html"><i class="fab fa-html5"></i> ‎HTML</span>
+              <span class="chip css"><i class="fab fa-css3-alt"></i> ‎CSS</span>
+              <span class="chip python"><i class="fab fa-python"></i> ‎Python</span>
+              <span class="chip apis"><i class="fas fa-cloud"></i> ‎APIs</span>
+              <span class="chip linux"><i class="fas fa-microchip"></i> ‎Linux</span>
+            </div>
+          </div>
         </div>
       </section>
-
-      <footer>D.ZHRANI © 2025 ©</footer>
+      <footer>
+        <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
+      </footer>
     </div>
   </main>
 </body>
