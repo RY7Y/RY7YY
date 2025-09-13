@@ -8,15 +8,12 @@
   <meta property="og:title" content="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸" />
   <meta property="og:description" content="جميع حساباتي وروابطي بمكان واحد" />
   <meta name="color-scheme" content="light dark" />
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
     @font-face {
       font-family: 'MontserratArabic';
       src: url('Montserrat-Arabic-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
     }
 
     :root {
@@ -32,220 +29,135 @@
       --accent-contrast: #ffffff;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
     html, body {
-      height: 100%;
-      margin: 0;
+      height: 100%; margin: 0;
       font-family: 'MontserratArabic', sans-serif;
-      background: var(--bg);
-      color: var(--fg);
+      background: var(--bg); color: var(--fg);
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
     }
 
-    a {
-      color: var(--link);
-      text-decoration: none;
-    }
+    a { color: var(--link); text-decoration: none; }
+    img { max-width: 100%; display: block; }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .wrap {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 28px 16px;
-    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px; }
 
     .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 18px; padding: 22px;
       box-shadow: 0 8px 28px var(--ring);
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      color: var(--muted);
-      font-weight: 800;
-      letter-spacing: .3px;
-      margin-bottom: 6px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; color: var(--muted); font-weight: 800;
+      letter-spacing: .3px; margin-bottom: 6px;
     }
 
-    .dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: currentColor;
-      opacity: .22;
-    }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: currentColor; opacity: .22; }
 
     .hero {
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      gap: 28px;
-      align-items: center;
+      display: grid; grid-template-columns: 220px 1fr;
+      gap: 28px; align-items: center;
     }
 
     @media (max-width: 740px) {
-      .hero {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
+      .hero { grid-template-columns: 1fr; gap: 16px; }
     }
 
     .avatar {
-      width: 176px;
-      height: 176px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: var(--soft);
-      border: 1px solid var(--border);
-      margin-inline: auto;
+      width: 176px; height: 176px; border-radius: 50%;
+      object-fit: cover; background: var(--soft);
+      border: 1px solid var(--border); margin-inline: auto;
     }
 
     .name {
-      margin: 6px 0 2px;
-      font-size: clamp(26px, 4.4vw, 36px);
-      font-weight: 800;
-      letter-spacing: .2px;
-      text-align: center;
+      margin: 6px 0 2px; font-size: clamp(26px, 4.4vw, 36px);
+      font-weight: 800; letter-spacing: .2px; text-align: center;
     }
 
     .role {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-weight: 700;
-      font-size: clamp(15px, 2.4vw, 18px);
+      margin: 0 0 10px; color: var(--muted);
+      font-weight: 700; font-size: clamp(15px, 2.4vw, 18px);
       text-align: center;
     }
 
     .intro {
-      margin: 0 auto 14px;
-      padding: 12px 14px;
-      background: var(--soft);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-weight: 600;
-      max-width: 60ch;
-      text-align: center;
+      margin: 0 auto 14px; padding: 12px 14px;
+      background: var(--soft); border: 1px solid var(--border);
+      border-radius: 12px; font-weight: 600;
+      max-width: 60ch; text-align: center;
     }
 
     .social {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0 14px;
-      justify-content: center;
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin: 10px 0 14px; justify-content: center;
     }
 
     .social a {
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      color: var(--link);
-      background: var(--soft);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      font-size: 20px;
-      transition: transform 0.2s ease, background 0.2s;
+      width: 44px; height: 44px; display: grid; place-items: center;
+      color: var(--link); background: var(--soft);
+      border: 1px solid var(--border); border-radius: 12px;
+      font-size: 20px; transition: transform 0.2s ease, background 0.2s;
     }
 
     .social a:hover {
-      transform: translateY(-2px);
-      background: var(--border);
+      transform: translateY(-2px); background: var(--border);
     }
 
     .divider {
-      height: 1px;
-      background: var(--border);
-      margin: 16px auto;
-      border-radius: 1px;
-      max-width: 720px;
+      height: 1px; background: var(--border);
+      margin: 16px auto; border-radius: 1px; max-width: 720px;
     }
 
     .link-list {
-      display: grid;
-      gap: 10px;
-      margin: 14px auto 6px;
-      max-width: 520px;
+      display: grid; gap: 10px;
+      margin: 14px auto 6px; max-width: 520px;
       justify-items: center;
     }
 
     .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 52px;
-      width: 100%;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: var(--card);
-      color: var(--fg);
-      font-weight: 800;
-      letter-spacing: .2px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; min-height: 52px; width: 100%;
+      border-radius: 12px; border: 1px solid var(--border);
+      background: var(--card); color: var(--fg);
+      font-weight: 800; letter-spacing: .2px;
       transition: transform .12s ease, background-color .2s ease, border-color .2s ease;
-      padding: 12px 16px;
-      text-align: center;
+      padding: 12px 16px; text-align: center;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .btn i {
-      opacity: .95;
-    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn i { opacity: .95; }
 
     .section-label {
-      margin: 18px 0 8px;
-      font-size: 14px;
-      color: var(--muted);
-      font-weight: 800;
-      text-align: center;
+      margin: 18px 0 8px; font-size: 14px;
+      color: var(--muted); font-weight: 800; text-align: center;
     }
 
     .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
     }
 
     .chip {
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
+      padding: 6px 10px; border-radius: 999px;
+      font-size: 14px; font-weight: 700;
       border: 1px solid var(--border);
-      background: var(--soft);
-      color: var(--fg);
+      background: var(--soft); color: var(--fg);
     }
 
     .visits-counter {
       margin-top: 30px;
       text-align: center;
-      font-size: 14px;
+      font-size: 15px;
       color: var(--muted);
       font-weight: bold;
+      transition: all 0.3s ease;
     }
 
     footer {
       padding: 26px 0 34px;
-      color: var(--muted);
-      text-align: center;
+      color: var(--muted); text-align: center;
     }
   </style>
 </head>
@@ -269,16 +181,16 @@
             <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا عسل 👑</p>
 
             <nav class="social" aria-label="روابط اجتماعية">
-              <a href="https://t.me/RY7DY" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
-              <a href="https://instagram.com/RY3YY" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="https://snapchat.com/add/dy.q" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
-              <a href="https://x.com/ry7yy" aria-label="Twitter/X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://t.me/RY7DY"><i class="fab fa-telegram"></i></a>
+              <a href="https://instagram.com/RY3YY"><i class="fab fa-instagram"></i></a>
+              <a href="https://snapchat.com/add/dy.q"><i class="fab fa-snapchat-ghost"></i></a>
+              <a href="https://x.com/ry7yy"><i class="fab fa-x-twitter"></i></a>
             </nav>
 
-            <div class="divider" role="separator" aria-hidden="true"></div>
+            <div class="divider" role="separator"></div>
 
-            <nav class="link-list" aria-label="روابط رئيسية">
-              <a class="btn" href="https://t.me/RY7YY" aria-label="قناة تلجرام">
+            <nav class="link-list">
+              <a class="btn" href="https://t.me/RY7YY">
                 <i class="fab fa-telegram"></i>
                 <span>للتواصل تيليقرام</span>
               </a>
@@ -297,7 +209,7 @@
         </div>
       </section>
 
-      <div class="visits-counter" id="visitorCounter">... جاري تحميل عدد الزوار</div>
+      <div class="visits-counter" id="visitorCounter">عدد الزوار: 0</div>
 
       <footer>
         <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
@@ -306,13 +218,16 @@
   </main>
 
   <script>
-    // ✅ عداد الزوار من countapi
-    fetch('https://api.countapi.xyz/hit/ry7yy.github.io/visits')
-      .then(res => res.json())
-      .then(data => {
-        const counter = document.getElementById('visitorCounter');
-        counter.textContent = `عدد الزوار حتى الآن: ${data.value.toLocaleString()}`;
-      });
+    window.addEventListener("DOMContentLoaded", () => {
+      const counter = document.getElementById('visitorCounter');
+      fetch('https://api.countapi.xyz/hit/ry7yy.github.io/visits')
+        .then(res => res.json())
+        .then(data => {
+          counter.textContent = `عدد الزوار حتى الآن: ${data.value.toLocaleString()}`;
+        }).catch(() => {
+          counter.textContent = "تعذر تحميل عدد الزوار ❌";
+        });
+    });
   </script>
 </body>
 </html>
