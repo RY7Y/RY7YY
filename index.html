@@ -108,7 +108,6 @@
       font-weight: 800;
       letter-spacing: .2px;
       text-align: center;
-      font-family: 'MontserratArabic', sans-serif;
     }
 
     .role {
@@ -209,10 +208,10 @@
     }
 
     .skills {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
-      justify-content: center;
+      justify-items: center;
       margin-bottom: 24px;
     }
 
@@ -238,6 +237,7 @@
       padding: 26px 0 34px;
       color: var(--muted);
       text-align: center;
+      font-family: 'MontserratArabic', sans-serif;
     }
   </style>
 </head>
