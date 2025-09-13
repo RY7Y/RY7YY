@@ -209,28 +209,44 @@
         </div>
       </section>
 
-      <div class="visits-counter" id="visitorCounter">جاري تحميل عدد الزوار ...</div>
+<div class="visits-counter" id="visitorCounter">جاري تحميل عدد الزوار ...</div>
 
-      <footer>
-        <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
-      </footer>
-    </div>
-  </main>
+<footer>
+  <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
+</footer>
+</div>
+</main>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      const counter = document.getElementById("visitorCounter");
+<script>
+  const endpoint = "https://api.npoint.io/12d678d070001e2e4652"; // ← استبدل هذا برابطك الفعلي
 
-      fetch("https://api.countapi.xyz/update/ry7yy/visits/?amount=1")
-        .then((res) => res.json())
-        .then((data) => {
-          counter.textContent = `عدد الزوار حتى الآن: ${data.value.toLocaleString()}`;
-        })
-        .catch(() => {
-          counter.textContent = "❌ تعذر تحميل عدد الزوار";
-          counter.style.color = "#ef4444"; // أحمر
-        });
-    });
-  </script>
+  async function updateVisits() {
+    const counter = document.getElementById("visitorCounter");
+
+    try {
+      // جلب البيانات الحالية
+      const res = await fetch(endpoint);
+      const data = await res.json();
+      const newVisits = (data.visits || 0) + 1;
+
+      // تحديث البيانات في نفس الرابط
+      await fetch(endpoint, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ visits: newVisits })
+      });
+
+      counter.textContent = `عدد الزوار حتى الآن: ${newVisits.toLocaleString()}`;
+    } catch (err) {
+      console.error("Visit counter error:", err);
+      counter.textContent = "❌ تعذر تحميل عدد الزوار";
+      counter.style.color = "#ef4444";
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", updateVisits);
+</script>
 </body>
 </html>
