@@ -219,14 +219,16 @@
 
   <script>
     window.addEventListener("DOMContentLoaded", () => {
-      const counter = document.getElementById('visitorCounter');
-      fetch('https://api.countapi.xyz/hit/ry7yy.github.io/RY7YY')
-        .then(res => res.json())
-        .then(data => {
+      const counter = document.getElementById("visitorCounter");
+
+      fetch("https://api.countapi.xyz/update/ry7yy/visits/?amount=1")
+        .then((res) => res.json())
+        .then((data) => {
           counter.textContent = `عدد الزوار حتى الآن: ${data.value.toLocaleString()}`;
         })
         .catch(() => {
-          counter.textContent = "تعذر تحميل عدد الزوار ❌";
+          counter.textContent = "❌ تعذر تحميل عدد الزوار";
+          counter.style.color = "#ef4444"; // أحمر
         });
     });
   </script>
