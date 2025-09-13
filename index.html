@@ -20,16 +20,16 @@
     }
 
     :root {
-      --bg: #0d1117;
-      --fg: #ffffff;
-      --muted: #94a3b8;
-      --soft: rgba(255, 255, 255, 0.05);
+      --bg: #0e1016;
+      --fg: #f9fafb;
+      --muted: #9ca3af;
+      --soft: rgba(255, 255, 255, 0.04);
       --card: #161b22;
-      --border: #30363d;
-      --ring: rgba(255, 255, 255, 0.1);
-      --link: #58a6ff;
-      --accent: #2fa6ff;
-      --accent-contrast: #000000;
+      --border: #2d333b;
+      --ring: rgba(255, 255, 255, 0.08);
+      --link: #60a5fa;
+      --accent: #3b82f6;
+      --accent-contrast: #ffffff;
     }
 
     *, *::before, *::after {
@@ -234,6 +234,14 @@
       color: var(--fg);
     }
 
+    .visits-counter {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: bold;
+    }
+
     footer {
       padding: 26px 0 34px;
       color: var(--muted);
@@ -289,10 +297,22 @@
         </div>
       </section>
 
+      <div class="visits-counter" id="visitorCounter">... جاري تحميل عدد الزوار</div>
+
       <footer>
         <div>&copy; 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
       </footer>
     </div>
   </main>
+
+  <script>
+    // ✅ عداد الزوار من countapi
+    fetch('https://api.countapi.xyz/hit/ry7yy.github.io/visits')
+      .then(res => res.json())
+      .then(data => {
+        const counter = document.getElementById('visitorCounter');
+        counter.textContent = `عدد الزوار حتى الآن: ${data.value.toLocaleString()}`;
+      });
+  </script>
 </body>
 </html>
