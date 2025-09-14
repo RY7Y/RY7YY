@@ -32,29 +32,33 @@
     }
 
     /* ✅ مظهر فاتح */
-    [data-theme="light"] {
-      --bg:#ffffff;
-      --fg:#0d1117;
-      --muted:#374151;
-      --soft:rgba(0,0,0,.04);
-      --card:#f9fafb;
-      --border:#e5e7eb;
-      --ring:rgba(0,0,0,.08);
-      --link:#2563eb;
-      --neon:#00aaff;
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:#ffffff;
+        --fg:#0d1117;
+        --muted:#374151;
+        --soft:rgba(0,0,0,.04);
+        --card:#f9fafb;
+        --border:#e5e7eb;
+        --ring:rgba(0,0,0,.08);
+        --link:#2563eb;
+        --neon:#00aaff;
+      }
     }
 
     /* ✅ مظهر داكن */
-    [data-theme="dark"] {
-      --bg:#0d1117;
-      --fg:#ffffff;
-      --muted:#94a3b8;
-      --soft:rgba(255,255,255,.06);
-      --card:#161b22;
-      --border:#30363d;
-      --ring:rgba(255,255,255,.10);
-      --link:#58a6ff;
-      --neon:#00f5ff;
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#0d1117;
+        --fg:#ffffff;
+        --muted:#94a3b8;
+        --soft:rgba(255,255,255,.06);
+        --card:#161b22;
+        --border:#30363d;
+        --ring:rgba(255,255,255,.10);
+        --link:#58a6ff;
+        --neon:#00f5ff;
+      }
     }
 
     *,*::before,*::after{box-sizing:border-box}
@@ -98,35 +102,52 @@
 
     .section-label{margin:18px 0 12px;font-size:16px;color:var(--muted);font-weight:800}
 
-    .skills {display:grid;grid-template-columns:repeat(3,auto);gap:12px;justify-content:center;margin-bottom:24px}
-    .chip{padding:10px 18px;border-radius:999px;font-size:14px;font-weight:700;font-family:'MontserratArabic',sans-serif;display:flex;align-items:center;gap:6px}
-    .chip.swift{background:#ff4c4c;color:#fff}.chip.html{background:#e44d26;color:#fff}.chip.css{background:#2965f1;color:#fff}
-    .chip.python{background:#2b6ca3;color:#fff}.chip.apis{background:#14b8a6;color:#fff}.chip.linux{background:#f59e0b;color:#000}
+    .section-label {
+      margin: 18px 0 8px;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .chip {
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'MontserratArabic', sans-serif;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chip.swift   { background: #ff4c4c; color: #fff; }
+    .chip.html    { background: #e44d26; color: #fff; }
+    .chip.css     { background: #2965f1; color: #fff; }
+    .chip.python  { background: #2b6ca3; color: #fff; }
+    .chip.apis    { background: #14b8a6; color: #fff; }
+    .chip.linux   { background: #f59e0b; color: #000; }
 
     footer{padding:26px 0 34px;color:var(--muted);text-align:center;font-family:'MontserratArabic',sans-serif}
-
-    /* ✅ أزرار اختيار المظهر */
-    .theme-switcher{display:flex;justify-content:center;gap:10px;margin:20px 0}
-    .theme-btn{padding:8px 16px;border:1px solid var(--border);border-radius:8px;background:var(--soft);color:var(--fg);cursor:pointer;font-family:'MontserratArabic',sans-serif;transition:.3s}
-    .theme-btn:hover{background:var(--border)}
   </style>
 </head>
 <body>
   <main>
     <div class="wrap">
-      <section class="card" aria-label="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸">
+      <section class="card" aria-label="𝙳.𝚉𝙷𝚁𝙰𝙉𝙸">
         <div class="hero">
-          <img class="avatar" src="IMG_3084.png" alt="𝙳.𝚉𝙷𝚁𝙰𝙽𝙸" />
-          <h1 class="name">𝙳.𝚉𝙷𝚁𝙰𝙽𝙸</h1>
+          <img class="avatar" src="IMG_3084.png" alt="𝙳.𝚉𝙷𝚁𝙰𝙽𝙰𝙸" />
+          <h1 class="name">𝙳.𝚉𝙷𝚁𝙰𝙉𝙸</h1>
           <p class="role">مطور تطبيقات ومواقع إلكترونية</p>
           <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا عسل 👑</p>
-
-          <!-- ✅ أزرار اختيار المظهر -->
-          <div class="theme-switcher">
-            <button class="theme-btn" onclick="setTheme('system')">النظام</button>
-            <button class="theme-btn" onclick="setTheme('light')">فاتح</button>
-            <button class="theme-btn" onclick="setTheme('dark')">داكن</button>
-          </div>
 
           <!-- أيقونات التواصل -->
           <nav class="social">
@@ -156,26 +177,8 @@
         </div>
       </section>
 
-      <footer><div>© 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div></footer>
+      <footer><div>© 𝙳.𝚉𝙷𝚁𝙰𝙉𝙸 © 2025</div></footer>
     </div>
   </main>
-
-  <script>
-    function setTheme(mode){
-      if(mode==='system'){
-        localStorage.removeItem('theme');
-        document.documentElement.removeAttribute('data-theme');
-      }else{
-        localStorage.setItem('theme',mode);
-        document.documentElement.setAttribute('data-theme',mode);
-      }
-    }
-
-    // ✅ تحميل المظهر المخزن
-    (function(){
-      const saved=localStorage.getItem('theme');
-      if(saved){document.documentElement.setAttribute('data-theme',saved);}
-    })();
-  </script>
 </body>
 </html>
