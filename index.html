@@ -13,13 +13,15 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    @font-face{
-      font-family:'MontserratArabic';
-      src:url('Montserrat-Arabic-Regular.ttf') format('truetype');
-      font-weight:normal;font-style:normal;font-display:swap;
+    @font-face {
+      font-family: 'MontserratArabic';
+      src: url('Montserrat-Arabic-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
 
-    :root{
+    :root {
       --bg:#0d1117;
       --fg:#ffffff;
       --muted:#94a3b8;
@@ -31,81 +33,94 @@
       --neon:#00f5ff;
     }
 
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{
-      height:100%;margin:0;
-      font-family:'MontserratArabic',sans-serif;
-      color:var(--fg);line-height:1.75;text-align:center;
-      -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-      background:linear-gradient(-45deg,#0d1117,#161b22,#0d1117,#1e293b);
-      background-size:400% 400%;animation:bg-animate 15s ease infinite;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      font-family: 'MontserratArabic', sans-serif !important;
     }
-    @keyframes bg-animate{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-    a{color:var(--link);text-decoration:none}
-    img{max-width:100%;display:block;margin:0 auto}
-    .wrap{max-width:920px;margin:0 auto;padding:28px 16px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 8px 28px var(--ring)}
-
-    .hero{display:flex;flex-direction:column;align-items:center}
-    .avatar{width:176px;height:176px;border-radius:50%;object-fit:cover;background:var(--soft);border:1px solid var(--border)}
-    .name{margin:14px 0 6px;font-size:clamp(26px,4.4vw,36px);font-weight:800;letter-spacing:.2px}
-    .role{margin:0 0 10px;color:var(--muted);font-weight:700;font-size:clamp(15px,2.4vw,18px)}
-    .intro{margin:0 auto 16px;padding:12px 14px;background:var(--soft);border:1px solid var(--border);border-radius:12px;font-weight:600;max-width:60ch}
-
-    .social{display:flex;justify-content:center;gap:14px;margin:8px 0 18px;flex-direction:row-reverse}
-    .social a{inline-size:52px;block-size:52px;display:grid;place-items:center;border-radius:14px;transition:transform .25s ease;box-shadow:0 6px 14px rgba(0,0,0,.25)}
-    .social a i{font-size:22px;animation:pulse 2.2s infinite ease-in-out}
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
-    .social a:hover{transform:translateY(-3px)}
-
-    .divider{height:1px;background:var(--border);margin:16px auto;border-radius:1px;max-width:720px}
-    .link-list{display:grid;gap:10px;margin:0 auto 12px;max-width:520px;justify-items:center}
-
-    .btn{
-      display:flex;align-items:center;justify-content:center;gap:10px;
-      min-height:52px;width:100%;border-radius:12px;padding:12px 16px;text-align:center;
-      font-weight:800;letter-spacing:.2px;color:var(--neon);background:#000;border:2px solid var(--neon);
-      box-shadow:0 0 10px var(--neon),0 0 20px var(--neon);transition:transform .2s ease, box-shadow .2s ease;
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'MontserratArabic', sans-serif;
+      color: var(--fg);
+      line-height: 1.75;
+      text-align: center;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      background: linear-gradient(-45deg,#0d1117,#161b22,#0d1117,#1e293b);
+      background-size: 400% 400%;
+      animation: bg-animate 15s ease infinite;
     }
-    .btn:hover{transform:translateY(-2px);box-shadow:0 0 18px var(--neon),0 0 36px var(--neon)}
 
-    .section-label{margin:18px 0 12px;font-size:16px;color:var(--muted);font-weight:800}
+    @keyframes bg-animate {
+      0% { background-position:0% 50% }
+      50% { background-position:100% 50% }
+      100% { background-position:0% 50% }
+    }
 
-    /* شبكة المهارات مرتبة */.skills {
-  display: grid;
-  grid-template-columns: repeat(3, auto); /* ثلاث مهارات في كل صف */
-  gap: 16px 22px; /* فراغ بين الصفوف والأعمدة */
-  justify-content: center; /* يجعلها بالمنتصف تماماً */
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
-}
+    a { color: var(--link); text-decoration: none }
+    img { max-width: 100%; display: block; margin: 0 auto }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px; box-shadow: 0 8px 28px var(--ring) }
 
-.chip {
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-  min-width: 100px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
-}
+    .hero { display: flex; flex-direction: column; align-items: center }
+    .avatar { width: 176px; height: 176px; border-radius: 50%; object-fit: cover; background: var(--soft); border: 1px solid var(--border) }
+    .name { margin: 14px 0 6px; font-size: clamp(26px,4.4vw,36px); font-weight: 800; letter-spacing: .2px }
+    .role { margin: 0 0 10px; color: var(--muted); font-weight: 700; font-size: clamp(15px,2.4vw,18px) }
+    .intro { margin: 0 auto 16px; padding: 12px 14px; background: var(--soft); border: 1px solid var(--border); border-radius: 12px; font-weight: 600; max-width: 60ch }
 
-/* 🎨 ألوان كل مهارة */
-.chip.css { background: #2965f1; }     /* أزرق */
-.chip.html { background: #e44d26; }    /* برتقالي */
-.chip.swift { background: #ff4c4c; }   /* أحمر */
-.chip.linux { background: #f59e0b; color: #000; }  /* أصفر/برتقالي غامق */
-.chip.apis { background: #14b8a6; }    /* أخضر مزرق */
-.chip.python { background: #3776ab; }  /* أزرق بايثون */
+    .social { display: flex; justify-content: center; gap: 14px; margin: 8px 0 18px; flex-direction: row-reverse }
+    .social a { inline-size: 52px; block-size: 52px; display: grid; place-items: center; border-radius: 14px; transition: transform .25s ease; box-shadow: 0 6px 14px rgba(0,0,0,.25) }
+    .social a i { font-size: 22px; animation: pulse 2.2s infinite ease-in-out }
+    @keyframes pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.22) } }
+    .social a:hover { transform: translateY(-3px) }
 
-    footer{padding:26px 0 34px;color:var(--muted);text-align:center;font-family:'MontserratArabic',sans-serif}
+    .divider { height: 1px; background: var(--border); margin: 16px auto; border-radius: 1px; max-width: 720px }
+    .link-list { display: grid; gap: 10px; margin: 0 auto 12px; max-width: 520px; justify-items: center }
+
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; width: 100%; border-radius: 12px; padding: 12px 16px; text-align: center;
+      font-weight: 800; letter-spacing: .2px; color: var(--neon); background:#000; border:2px solid var(--neon);
+      box-shadow:0 0 10px var(--neon),0 0 20px var(--neon); transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 18px var(--neon),0 0 36px var(--neon) }
+
+    .section-label { margin: 18px 0 12px; font-size: 16px; color: var(--muted); font-weight: 800 }
+
+    /* شبكة المهارات */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 16px 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .chip {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    /* 🎨 ألوان المهارات */
+    .chip.css { background: #2965f1; }     /* أزرق */
+    .chip.html { background: #e44d26; }    /* برتقالي */
+    .chip.swift { background: #ff4c4c; }   /* أحمر */
+    .chip.linux { background: #f59e0b; color: #000; }  /* أصفر */
+    .chip.apis { background: #14b8a6; }    /* أخضر مزرق */
+    .chip.python { background: #3776ab; }  /* أزرق بايثون */
+
+    footer { padding: 26px 0 34px; color: var(--muted); text-align: center; font-family: 'MontserratArabic', sans-serif }
   </style>
 </head>
 <body>
@@ -134,19 +149,19 @@
             <a class="btn" href="https://t.me/RY7YY"><i class="fab fa-telegram"></i><span>للتواصل تيليقرام</span></a>
           </nav>
 
-<p class="section-label">مهارات</p>
-<div class="skills">
-  <span class="chip css"><i class="fab fa-css3-alt"></i> CSS</span>
-  <span class="chip html"><i class="fab fa-html5"></i> HTML</span>
-  <span class="chip swift"><i class="fab fa-apple"></i> Swift</span>
-  <span class="chip linux"><i class="fas fa-microchip"></i> Linux</span>
-  <span class="chip apis"><i class="fas fa-cloud"></i> APIs</span>
-  <span class="chip python"><i class="fab fa-python"></i> Python</span>
-</div>
+          <p class="section-label">مهارات</p>
+          <div class="skills">
+            <span class="chip css"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="chip html"><i class="fab fa-html5"></i> HTML</span>
+            <span class="chip swift"><i class="fab fa-apple"></i> Swift</span>
+            <span class="chip linux"><i class="fas fa-microchip"></i> Linux</span>
+            <span class="chip apis"><i class="fas fa-cloud"></i> APIs</span>
+            <span class="chip python"><i class="fab fa-python"></i> Python</span>
+          </div>
         </div>
       </section>
 
-      <footer><div>© 𝙳.𝚉𝙷𝚁𝙰𝙉𝙸 © 2025</div></footer>
+      <footer><div>© 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div></footer>
     </div>
   </main>
 </body>
