@@ -1,12 +1,16 @@
 {
   "monthly": {
-    "ABC12345": "2025-10-15",
-    "DEF67890": "2025-11-01",
-    "MNO45678": "2025-12-01"
+    "RY1234A1": "available",
+    "RY5678B2": "available",
+    "RY9012C3": "available",
+    "RY3456D4": "available",
+    "RY7890E5": "available"
   },
   "yearly": {
-    "XYZ98765": "2026-09-15",
-    "LMN54321": "2026-12-31",
-    "QWE11223": "2027-01-10"
+    "RY1122X1": "available",
+    "RY3344Y2": "available",
+    "RY5566Z3": "available",
+    "RY7788W4": "available",
+    "RY9900V5": "available"
   }
 }
