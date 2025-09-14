@@ -13,15 +13,14 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    @font-face {
-      font-family: 'MontserratArabic';
-      src: url('Montserrat-Arabic-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
+    /* خط موحّد لكل النصوص (بدون إجبار الأيقونات) */
+    @font-face{
+      font-family:'MontserratArabic';
+      src:url('Montserrat-Arabic-Regular.ttf') format('truetype');
+      font-weight:normal;font-style:normal;font-display:swap;
     }
 
-    :root {
+    :root{
       --bg:#0d1117;
       --fg:#ffffff;
       --muted:#94a3b8;
@@ -33,94 +32,72 @@
       --neon:#00f5ff;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-      font-family: 'MontserratArabic', sans-serif !important;
+    *,*::before,*::after{ box-sizing:border-box; }
+    html,body{
+      height:100%; margin:0;
+      font-family:'MontserratArabic',sans-serif;   /* ← لا !important */
+      color:var(--fg); line-height:1.75; text-align:center;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      background:linear-gradient(-45deg,#0d1117,#161b22,#0d1117,#1e293b);
+      background-size:400% 400%; animation:bg-animate 15s ease infinite;
     }
+    @keyframes bg-animate{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 
-    html, body {
-      height: 100%;
-      margin: 0;
-      font-family: 'MontserratArabic', sans-serif;
-      color: var(--fg);
-      line-height: 1.75;
-      text-align: center;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      background: linear-gradient(-45deg,#0d1117,#161b22,#0d1117,#1e293b);
-      background-size: 400% 400%;
-      animation: bg-animate 15s ease infinite;
+    a{color:var(--link);text-decoration:none}
+    img{max-width:100%;display:block;margin:0 auto}
+    .wrap{max-width:920px;margin:0 auto;padding:28px 16px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 8px 28px var(--ring)}
+
+    .hero{display:flex;flex-direction:column;align-items:center}
+    .avatar{width:176px;height:176px;border-radius:50%;object-fit:cover;background:var(--soft);border:1px solid var(--border)}
+    .name{margin:14px 0 6px;font-size:clamp(26px,4.4vw,36px);font-weight:800;letter-spacing:.2px}
+    .role{margin:0 0 10px;color:var(--muted);font-weight:700;font-size:clamp(15px,2.4vw,18px)}
+    .intro{margin:0 auto 16px;padding:12px 14px;background:var(--soft);border:1px solid var(--border);border-radius:12px;font-weight:600;max-width:60ch}
+
+    /* أيقونات التواصل – تبقى بالحركة داخليًا */
+    .social{display:flex;justify-content:center;gap:14px;margin:8px 0 18px}
+    .social a{inline-size:52px;block-size:52px;display:grid;place-items:center;border-radius:14px;transition:transform .25s ease;box-shadow:0 6px 14px rgba(0,0,0,.25)}
+    .social a i{font-size:22px;animation:pulse 2.2s infinite ease-in-out}
+    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.22)}}
+    .social a:hover{transform:translateY(-3px)}
+
+    .divider{height:1px;background:var(--border);margin:16px auto;border-radius:1px;max-width:720px}
+    .link-list{display:grid;gap:10px;margin:0 auto 12px;max-width:520px;justify-items:center}
+
+    .btn{
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      min-height:52px;width:100%;border-radius:12px;padding:12px 16px;text-align:center;
+      font-weight:800;letter-spacing:.2px;color:var(--neon);background:#000;border:2px solid var(--neon);
+      box-shadow:0 0 10px var(--neon),0 0 20px var(--neon);transition:transform .2s ease, box-shadow .2s ease;
     }
+    .btn:hover{transform:translateY(-2px);box-shadow:0 0 18px var(--neon),0 0 36px var(--neon)}
 
-    @keyframes bg-animate {
-      0% { background-position:0% 50% }
-      50% { background-position:100% 50% }
-      100% { background-position:0% 50% }
+    .section-label{margin:18px 0 12px;font-size:16px;color:var(--muted);font-weight:800}
+
+    /* شبكة المهارات 3×2 – بالوسط ومقاسها على قد المحتوى */
+    .skills{
+      display:grid;
+      grid-template-columns:repeat(3,auto);
+      gap:16px 22px;
+      justify-content:center; align-items:center;
+      margin:0 auto; text-align:center;
     }
-
-    a { color: var(--link); text-decoration: none }
-    img { max-width: 100%; display: block; margin: 0 auto }
-    .wrap { max-width: 920px; margin: 0 auto; padding: 28px 16px }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 22px; box-shadow: 0 8px 28px var(--ring) }
-
-    .hero { display: flex; flex-direction: column; align-items: center }
-    .avatar { width: 176px; height: 176px; border-radius: 50%; object-fit: cover; background: var(--soft); border: 1px solid var(--border) }
-    .name { margin: 14px 0 6px; font-size: clamp(26px,4.4vw,36px); font-weight: 800; letter-spacing: .2px }
-    .role { margin: 0 0 10px; color: var(--muted); font-weight: 700; font-size: clamp(15px,2.4vw,18px) }
-    .intro { margin: 0 auto 16px; padding: 12px 14px; background: var(--soft); border: 1px solid var(--border); border-radius: 12px; font-weight: 600; max-width: 60ch }
-
-    .social { display: flex; justify-content: center; gap: 14px; margin: 8px 0 18px; flex-direction: row-reverse }
-    .social a { inline-size: 52px; block-size: 52px; display: grid; place-items: center; border-radius: 14px; transition: transform .25s ease; box-shadow: 0 6px 14px rgba(0,0,0,.25) }
-    .social a i { font-size: 22px; animation: pulse 2.2s infinite ease-in-out }
-    @keyframes pulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.22) } }
-    .social a:hover { transform: translateY(-3px) }
-
-    .divider { height: 1px; background: var(--border); margin: 16px auto; border-radius: 1px; max-width: 720px }
-    .link-list { display: grid; gap: 10px; margin: 0 auto 12px; max-width: 520px; justify-items: center }
-
-    .btn {
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-      min-height: 52px; width: 100%; border-radius: 12px; padding: 12px 16px; text-align: center;
-      font-weight: 800; letter-spacing: .2px; color: var(--neon); background:#000; border:2px solid var(--neon);
-      box-shadow:0 0 10px var(--neon),0 0 20px var(--neon); transition: transform .2s ease, box-shadow .2s ease;
+    .chip{
+      padding:8px 14px;
+      border-radius:999px;
+      font-size:14px;font-weight:700;color:#fff;
+      display:inline-flex;align-items:center;justify-content:center;gap:6px;
+      white-space:nowrap; box-shadow:0 3px 10px rgba(0,0,0,.25);
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 0 18px var(--neon),0 0 36px var(--neon) }
+    /* ألوان المهارات */
+    .chip.css{background:#2965f1}
+    .chip.html{background:#e44d26}
+    .chip.swift{background:#ff4c4c}
+    .chip.linux{background:#f59e0b;color:#000}
+    .chip.apis{background:#14b8a6}
+    .chip.python{background:#3776ab}
 
-    .section-label { margin: 18px 0 12px; font-size: 16px; color: var(--muted); font-weight: 800 }
-
-    /* شبكة المهارات */
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-      gap: 16px 20px;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .chip {
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      white-space: nowrap;
-    }
-
-    /* 🎨 ألوان المهارات */
-    .chip.css { background: #2965f1; }     /* أزرق */
-    .chip.html { background: #e44d26; }    /* برتقالي */
-    .chip.swift { background: #ff4c4c; }   /* أحمر */
-    .chip.linux { background: #f59e0b; color: #000; }  /* أصفر */
-    .chip.apis { background: #14b8a6; }    /* أخضر مزرق */
-    .chip.python { background: #3776ab; }  /* أزرق بايثون */
-
-    footer { padding: 26px 0 34px; color: var(--muted); text-align: center; font-family: 'MontserratArabic', sans-serif }
+    footer{padding:26px 0 34px;color:var(--muted);text-align:center;font-family:'MontserratArabic',sans-serif}
   </style>
 </head>
 <body>
@@ -133,19 +110,19 @@
           <p class="role">مطور تطبيقات ومواقع إلكترونية</p>
           <p class="intro">كل ما يخصني من روابط وتواصل مجمع هنا، حيّاك يا عسل 👑</p>
 
-          <!-- أيقونات التواصل -->
-          <nav class="social">
-            <a href="https://x.com/ry7yy" style="background:#000;"><i class="fab fa-x-twitter" style="color:#fff;"></i></a>
-            <a href="https://t.me/RY7DY" style="background:#229ED9;"><i class="fab fa-telegram" style="color:#fff;"></i></a>
-            <a href="https://snapchat.com/add/dy.q" style="background:#FFFC00;"><i class="fab fa-snapchat-ghost" style="color:#000;"></i></a>
-            <a href="https://instagram.com/RY3YY" style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF,#515BD4);"><i class="fab fa-instagram" style="color:#fff;"></i></a>
-            <a href="https://github.com/RY7Y" style="background:#333;"><i class="fab fa-github" style="color:#fff;"></i></a>
+          <!-- أيقونات التواصل بالترتيب المطلوب -->
+          <nav class="social" aria-label="روابط اجتماعية">
+            <a href="https://x.com/ry7yy" aria-label="X" style="background:#000;"><i class="fab fa-x-twitter" style="color:#fff;"></i></a>
+            <a href="https://t.me/RY7DY" aria-label="Telegram" style="background:#229ED9;"><i class="fab fa-telegram" style="color:#fff;"></i></a>
+            <a href="https://snapchat.com/add/dy.q" aria-label="Snapchat" style="background:#FFFC00;"><i class="fab fa-snapchat-ghost" style="color:#000;"></i></a>
+            <a href="https://instagram.com/RY3YY" aria-label="Instagram" style="background:linear-gradient(135deg,#F58529,#DD2A7B,#8134AF,#515BD4);"><i class="fab fa-instagram" style="color:#fff;"></i></a>
+            <a href="https://github.com/RY7Y" aria-label="GitHub" style="background:#333;"><i class="fab fa-github" style="color:#fff;"></i></a>
           </nav>
 
-          <div class="divider"></div>
+          <div class="divider" role="separator" aria-hidden="true"></div>
 
-          <!-- زر تيليقرام -->
-          <nav class="link-list">
+          <!-- زر التيليقرام -->
+          <nav class="link-list" aria-label="روابط رئيسية">
             <a class="btn" href="https://t.me/RY7YY"><i class="fab fa-telegram"></i><span>للتواصل تيليقرام</span></a>
           </nav>
 
@@ -161,7 +138,9 @@
         </div>
       </section>
 
-      <footer><div>© 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div></footer>
+      <footer>
+        <div>© 𝙳.𝚉𝙷𝚁𝙰𝙽𝙸 © 2025</div>
+      </footer>
     </div>
   </main>
 </body>
