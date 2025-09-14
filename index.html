@@ -72,33 +72,38 @@
 
     .section-label{margin:18px 0 12px;font-size:16px;color:var(--muted);font-weight:800}
 
-    /* شبكة المهارات مرتبة */
-.skills {
+    /* شبكة المهارات مرتبة */.skills {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  justify-items: center;
-  max-width: 500px;
+  grid-template-columns: repeat(3, auto); /* ثلاث مهارات في كل صف */
+  gap: 16px 22px; /* فراغ بين الصفوف والأعمدة */
+  justify-content: center; /* يجعلها بالمنتصف تماماً */
+  align-items: center;
   margin: 0 auto;
+  text-align: center;
 }
 
 .chip {
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
   color: #fff;
   text-align: center;
   min-width: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
 }
 
-/* ألوان كل مهارة */
-.chip.css { background: #2965f1; }
-.chip.html { background: #e44d26; }
-.chip.swift { background: #ff4c4c; }
-.chip.linux { background: #f59e0b; color: #000; }
-.chip.apis { background: #14b8a6; }
-.chip.python { background: #3776ab; }
+/* 🎨 ألوان كل مهارة */
+.chip.css { background: #2965f1; }     /* أزرق */
+.chip.html { background: #e44d26; }    /* برتقالي */
+.chip.swift { background: #ff4c4c; }   /* أحمر */
+.chip.linux { background: #f59e0b; color: #000; }  /* أصفر/برتقالي غامق */
+.chip.apis { background: #14b8a6; }    /* أخضر مزرق */
+.chip.python { background: #3776ab; }  /* أزرق بايثون */
 
     footer{padding:26px 0 34px;color:var(--muted);text-align:center;font-family:'MontserratArabic',sans-serif}
   </style>
