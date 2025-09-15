@@ -8,7 +8,7 @@
 // binding = "KV_ACTIVATIONS"
 // id = "<KV_ACTIVATIONS_ID>"
 
-// ✅ استبدلت الرابط ليعتمد على نطاقك الخاص (GitHub Pages أو أي استضافة أخرى)
+// ✅ نعتمد على نطاقك الخاص
 const CODES_JSON_URL = "https://devry7yy.org/codes.json";
 
 // مدة صلاحية لكل نوع
@@ -100,12 +100,15 @@ export default {
           return json({ success: false, message: "🚫 الكود مستخدم على جهاز آخر ولا يمكن إعادة استخدامه." }, 403);
         }
 
-        // 4) تفعيل جديد
+        // 4) تفعيل جديد + إزالة الكود من القائمة
         const now = Math.floor(Date.now() / 1000);
         const activation = { code, type, deviceId, start: now, durationDays };
 
         await KV_ACTIVATIONS.put(codeKey, JSON.stringify(activation), { expirationTtl: 400 * 24 * 3600 });
         await KV_ACTIVATIONS.put(deviceKey, JSON.stringify(activation), { expirationTtl: 400 * 24 * 3600 });
+
+        // 🔑 هنا نحذف الكود من قائمة الأكواد المصرح بها
+        await removeCodeFromAllowed(KV_CODES, type, code);
 
         const { expiresAt, remainingDays } = computeExpiry(now, durationDays);
 
@@ -171,6 +174,17 @@ async function getAllowedCodes(KV_CODES) {
   await KV_CODES.put("allowed-codes:last", String(now));
 
   return toSets(data);
+}
+
+async function removeCodeFromAllowed(KV_CODES, type, code) {
+  const data = await KV_CODES.get("allowed-codes", "json");
+  if (!data) return;
+
+  if (data[type]) {
+    data[type] = data[type].filter(c => c !== code);
+    await KV_CODES.put("allowed-codes", JSON.stringify(data));
+    await KV_CODES.put("allowed-codes:last", String(Math.floor(Date.now() / 1000)));
+  }
 }
 
 function toSets(data) {
