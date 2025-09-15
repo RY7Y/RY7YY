@@ -8,7 +8,8 @@
 // binding = "KV_ACTIVATIONS"
 // id = "<KV_ACTIVATIONS_ID>"
 
-const CODES_JSON_URL = "https://ry7y.github.io/RY7YY/codes.json";
+// ✅ استبدلت الرابط ليعتمد على نطاقك الخاص (GitHub Pages أو أي استضافة أخرى)
+const CODES_JSON_URL = "https://devry7yy.org/codes.json";
 
 // مدة صلاحية لكل نوع
 const DURATION = { monthly: 30, yearly: 365 };
@@ -174,7 +175,7 @@ async function getAllowedCodes(KV_CODES) {
 
 function toSets(data) {
   return {
-    monthly: new Set(Object.keys(data.monthly || {})),
-    yearly: new Set(Object.keys(data.yearly || {}))
+    monthly: new Set(data.monthly || []),
+    yearly: new Set(data.yearly || [])
   };
 }
