@@ -32,7 +32,7 @@ export default {
           return json({ success: true, active: false, message: "لا يوجد تفعيل محفوظ لهذا الجهاز." });
         }
 
-        const { code, type, start, durationDays } = activeJson;
+        const { code, type, start, durationDays, deviceName } = activeJson;
         const { expiresAt, remainingDays } = computeExpiry(start, durationDays);
 
         if (remainingDays <= 0) {
@@ -54,6 +54,7 @@ export default {
           type,
           expiresAt,
           remainingDays,
+          deviceName,
           message: "✅ تفعيل ساري على هذا الجهاز."
         });
       }
@@ -63,6 +64,7 @@ export default {
         const body = await request.json().catch(() => ({}));
         const deviceId = (body.deviceId || "").trim();
         const code = (body.code || "").trim();
+        const deviceName = (body.deviceName || "غير معروف").trim();
 
         if (!deviceId || !code) {
           return json({ success: false, message: "deviceId أو code مفقود." }, 400);
@@ -92,6 +94,7 @@ export default {
                 durationDays: codeState.durationDays,
                 expiresAt,
                 remainingDays,
+                deviceName: codeState.deviceName,
                 message: "✅ دخول تلقائي: الكود مفعل سابقاً على هذا الجهاز."
               });
             }
@@ -100,14 +103,22 @@ export default {
           return json({ success: false, message: "🚫 الكود مستخدم على جهاز آخر ولا يمكن إعادة استخدامه." }, 403);
         }
 
-        // 4) تفعيل جديد + إزالة الكود من القائمة
+        // 4) تفعيل جديد وربطه بالجهاز
         const now = Math.floor(Date.now() / 1000);
-        const activation = { code, type, deviceId, start: now, durationDays };
+        const activation = { 
+          code, 
+          type, 
+          deviceId, 
+          deviceName, 
+          start: now, 
+          durationDays,
+          activatedAt: new Date().toISOString()
+        };
 
         await KV_ACTIVATIONS.put(codeKey, JSON.stringify(activation), { expirationTtl: 400 * 24 * 3600 });
         await KV_ACTIVATIONS.put(deviceKey, JSON.stringify(activation), { expirationTtl: 400 * 24 * 3600 });
 
-        // 🔑 هنا نحذف الكود من قائمة الأكواد المصرح بها
+        // 🔑 نحذف الكود من القائمة حتى لا يستخدمه جهاز آخر
         await removeCodeFromAllowed(KV_CODES, type, code);
 
         const { expiresAt, remainingDays } = computeExpiry(now, durationDays);
@@ -119,6 +130,7 @@ export default {
           durationDays,
           expiresAt,
           remainingDays,
+          deviceName,
           message: `✅ تم التفعيل بنجاح — نوع الكود: ${type}, الصلاحية تبدأ من الآن.`
         });
       }
