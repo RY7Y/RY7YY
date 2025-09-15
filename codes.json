@@ -1,16 +1,15 @@
 {
-  "monthly": {
-    "RY1234A1": "available",
-    "RY5678B2": "available",
-    "RY9012C3": "available",
-    "RY3456D4": "available",
-    "RY7890E5": "available"
-  },
-  "yearly": {
-    "RY1122X1": "available",
-    "RY3344Y2": "available",
-    "RY5566Z3": "available",
-    "RY7788W4": "available",
-    "RY9900V5": "available"
-  }
+  "monthly": [
+    "RYM1234A",
+    "RYN5678B",
+    "RYY9012C",
+    "RYZ9900K"
+  ],
+  "yearly": [
+    "RYB1122X",
+    "RYJ3344Y",
+    "RYG5566Z",
+    "RYW7788W",
+    "RYU9090U"
+  ]
 }
