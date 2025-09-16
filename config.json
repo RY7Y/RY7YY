@@ -1,0 +1,11 @@
+{
+  "mode": "preview",
+  "captionPrefix": "📸 مشاركة من تطبيقي ",
+  "sticker": {
+    "posX": 0.5,
+    "posY": 0.5,
+    "rotation": 0,
+    "widthDp": 220,
+    "heightDp": 220
+  }
+}
