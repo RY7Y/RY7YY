@@ -2,8 +2,8 @@
   "mode": "preview",
   "captionPrefix": "📸 مشاركة من تطبيقي ",
   "caption": {
-    "addHashtags": ["#RY7YY", "#RazahChat"],
-    "appendDate": false
+    "addHashtags": ["#RazahChat", "#SnapShare"],
+    "appendDate": true
   },
   "providers": [
     {
@@ -15,24 +15,16 @@
       "requireInstalled": true
     },
     {
-      "name": "Snapchat_Alt",
-      "enabled": true,
-      "scheme": "snapchatalpha",
-      "previewPath": "creativekit/preview/1",
-      "cameraPath": "creativekit/camera/1",
-      "requireInstalled": false
-    },
-    {
-      "name": "SnapLikeMod",
+      "name": "SnapchatAlt",
       "enabled": false,
-      "scheme": "snaplike",
+      "scheme": "snapchatbeta",
       "previewPath": "creativekit/preview/1",
       "cameraPath": "creativekit/camera/1",
       "requireInstalled": false
     }
   ],
   "pasteboardTTLSeconds": 300,
-  "appNameOverride": "",
+  "appNameOverride": "RazahChat",
   "sticker": {
     "posX": 0.5,
     "posY": 0.5,
@@ -43,16 +35,16 @@
   "media": {
     "image": {
       "format": "jpeg",
-      "jpegQuality": 0.98,
+      "jpegQuality": 0.95,
       "watermark": {
-        "enabled": false,
-        "text": "RY7YY",
-        "fontName": "System",
-        "size": 18,
+        "enabled": true,
+        "text": "RazahChat",
+        "fontName": "AvenirNext-Bold",
+        "size": 20,
         "colorHex": "#FFFFFF",
         "alpha": 0.8,
-        "bottomPadding": 16,
-        "rightPadding": 16
+        "bottomPadding": 24,
+        "rightPadding": 24
       }
     },
     "video": {
