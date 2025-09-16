@@ -13,18 +13,25 @@
       "previewPath": "creativekit/preview/1",
       "cameraPath": "creativekit/camera/1",
       "requireInstalled": true
-    },
-    {
-      "name": "SnapchatAlt",
-      "enabled": false,
-      "scheme": "snapchatbeta",
-      "previewPath": "creativekit/preview/1",
-      "cameraPath": "creativekit/camera/1",
-      "requireInstalled": false
     }
   ],
+  "libraries": {
+    "dsPhotoEditor": {
+      "enabled": true,
+      "presentBeforeShare": true,
+      "tintColorHex": "#FFD200",
+      "exportQuality": 0.95
+    },
+    "creativeKit": {
+      "enabled": true,
+      "sendStickerInCamera": true
+    },
+    "coreKit": {
+      "enabled": false
+    }
+  },
   "pasteboardTTLSeconds": 300,
-  "appNameOverride": "RazahChat",
+  "appNameOverride": "",
   "sticker": {
     "posX": 0.5,
     "posY": 0.5,
@@ -37,7 +44,7 @@
       "format": "jpeg",
       "jpegQuality": 0.95,
       "watermark": {
-        "enabled": true,
+        "enabled": false,
         "text": "RazahChat",
         "fontName": "AvenirNext-Bold",
         "size": 20,
