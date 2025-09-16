@@ -15,21 +15,6 @@
       "requireInstalled": true
     }
   ],
-  "libraries": {
-    "dsPhotoEditor": {
-      "enabled": true,
-      "presentBeforeShare": true,
-      "tintColorHex": "#FFD200",
-      "exportQuality": 0.95
-    },
-    "creativeKit": {
-      "enabled": true,
-      "sendStickerInCamera": true
-    },
-    "coreKit": {
-      "enabled": true
-    }
-  },
   "pasteboardTTLSeconds": 300,
   "appNameOverride": "",
   "sticker": {
