@@ -1,10 +1,38 @@
 {
-  "mode": "preview", 
+  "mode": "preview",
   "captionPrefix": "📸 مشاركة من تطبيقي ",
-  "transports": {
-    "urlScheme": true,
-    "creativeKit": true
+  "caption": {
+    "addHashtags": ["#RY7YY", "#RazahChat"],
+    "appendDate": false
   },
+  "providers": [
+    {
+      "name": "Snapchat",
+      "enabled": true,
+      "scheme": "snapchat",
+      "previewPath": "creativekit/preview/1",
+      "cameraPath": "creativekit/camera/1",
+      "requireInstalled": true
+    },
+    {
+      "name": "Snapchat_Alt",
+      "enabled": true,
+      "scheme": "snapchatalpha",
+      "previewPath": "creativekit/preview/1",
+      "cameraPath": "creativekit/camera/1",
+      "requireInstalled": false
+    },
+    {
+      "name": "SnapLikeMod",
+      "enabled": false,
+      "scheme": "snaplike",
+      "previewPath": "creativekit/preview/1",
+      "cameraPath": "creativekit/camera/1",
+      "requireInstalled": false
+    }
+  ],
+  "pasteboardTTLSeconds": 300,
+  "appNameOverride": "",
   "sticker": {
     "posX": 0.5,
     "posY": 0.5,
@@ -12,19 +40,26 @@
     "widthDp": 220,
     "heightDp": 220
   },
-  "watermark": {
-    "enabled": true,
-    "text": "RY7YY",
-    "fontSize": 18,
-    "colorHex": "#FFFFFF",
-    "shadow": true,
-    "position": "bottomRight"
-  },
-  "video": {
-    "maxDurationSec": 60,
-    "optimizeForSnapchat": true
-  },
-  "pasteboard": {
-    "ttlSeconds": 300
+  "media": {
+    "image": {
+      "format": "jpeg",
+      "jpegQuality": 0.98,
+      "watermark": {
+        "enabled": false,
+        "text": "RY7YY",
+        "fontName": "System",
+        "size": 18,
+        "colorHex": "#FFFFFF",
+        "alpha": 0.8,
+        "bottomPadding": 16,
+        "rightPadding": 16
+      }
+    },
+    "video": {
+      "transcode": false,
+      "bitrateKbps": 8000,
+      "maxDurationSec": 60,
+      "maxSizeMB": 120
+    }
   }
 }
