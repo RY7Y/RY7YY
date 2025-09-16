@@ -1,11 +1,30 @@
 {
-  "mode": "preview",
+  "mode": "preview", 
   "captionPrefix": "📸 مشاركة من تطبيقي ",
+  "transports": {
+    "urlScheme": true,
+    "creativeKit": true
+  },
   "sticker": {
     "posX": 0.5,
     "posY": 0.5,
     "rotation": 0,
     "widthDp": 220,
     "heightDp": 220
+  },
+  "watermark": {
+    "enabled": true,
+    "text": "RY7YY",
+    "fontSize": 18,
+    "colorHex": "#FFFFFF",
+    "shadow": true,
+    "position": "bottomRight"
+  },
+  "video": {
+    "maxDurationSec": 60,
+    "optimizeForSnapchat": true
+  },
+  "pasteboard": {
+    "ttlSeconds": 300
   }
 }
