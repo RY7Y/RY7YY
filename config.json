@@ -27,7 +27,7 @@
       "sendStickerInCamera": true
     },
     "coreKit": {
-      "enabled": false
+      "enabled": true
     }
   },
   "pasteboardTTLSeconds": 300,
