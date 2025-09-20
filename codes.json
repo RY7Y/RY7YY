@@ -1,56 +1,15 @@
 {
-  "RYM1234A": {
-    "type": "monthly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYN5678B": {
-    "type": "monthly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYY9012C": {
-    "type": "monthly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYZ9900K": {
-    "type": "monthly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYB1122X": {
-    "type": "yearly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYJ3344Y": {
-    "type": "yearly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYG5566Z": {
-    "type": "yearly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYW7788W": {
-    "type": "yearly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  },
-  "RYU9090U": {
-    "type": "yearly",
-    "used": false,
-    "bundleId": null,
-    "deviceId": null
-  }
+  "monthly": [
+    "RYM1234A",
+    "RYN5678B",
+    "RYY9012C",
+    "RYZ9900K"
+  ],
+  "yearly": [
+    "RYB1122X",
+    "RYJ3344Y",
+    "RYG5566Z",
+    "RYW7788W",
+    "RYU9090U"
+  ]
 }
