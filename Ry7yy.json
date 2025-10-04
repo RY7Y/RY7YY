@@ -194,7 +194,7 @@
     },
     {
       "name": "MBC Masr2",
-      "url": "https://shls-masr2-enc.edgenextcdn.net/out/v1/f683685242b549f48ea8a5171e3e993a/index_7.m3u8",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-masr-2/754931856515075b0aabf0e583495c68/index.m3u8",
       "logo": "https://media0070.elcinema.com/tvguide/1399_1.png",
       "category": "MBC"
     },
