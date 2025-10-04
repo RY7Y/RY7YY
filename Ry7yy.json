@@ -182,7 +182,7 @@
     },
     {
       "name": "MBC 5",
-      "url": "https://mbc5-prod-dub-enc.edgenextcdn.net/out/v1/2720564b6a4641658fdfb6884b160da2/index_3.m3u8",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-5/ee6b000cee0629411b666ab26cb13e9b/index.m3u8",
       "logo": "https://jzu4.github.io/files/img/EEFB9732-6417-4C99-BE0D-F39C344A6D02.png",
       "category": "MBC"
     },
