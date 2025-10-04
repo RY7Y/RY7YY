@@ -2,31 +2,43 @@
   "channels": [
     {
       "name": "beIN SPORTS HD1",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/40_.m3u8",
+      "url": "https://sportina.life/BEIN1/video.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD2",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/38_.m3u8",
+      "url": "https://sportina.life/BEIN2/video.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD3",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/250_.m3u8",
+      "url": "https://sportina.life/BEIN3/video.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD4",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/251_.m3u8",
+      "url": "https://sportina.life/BEIN4/video.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category":  "BeIN Sports"
     },
     {
       "name": "beIN SPORTS HD5",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/251_.m3u8",
+      "url": "https://sportina.life/BEIN5/video.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category": "BeIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD6",
+      "url": "https://sportina.life/BEIN6/video.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category": "BeIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD7",
+      "url": "https://sportina.life/BEIN7/video.m3u8",
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
@@ -308,13 +320,13 @@
     },
     {
       "name": "ثمانية الاولى",
-      "url": "http://sportlo.live:8080/thmanyah-1/tracks-v1a1/mono.m3u8",
+      "url": "https://sportina.life/thman1/index.fmp4.m3u8",
       "logo": "https://jzu4.github.io/IMG_3500.png",
       "category": "ثمانية"
     },
     {
       "name": "ثمانية الثانيه",
-      "url": "http://sportlo.live:8080/thmanyah-2/tracks-v1a1/mono.m3u8",
+      "url": "https://sportina.life/thman2/index.fmp4.m3u8",
       "logo": "https://jzu4.github.io/IMG_3500.png",
       "category": "ثمانية"
     },
