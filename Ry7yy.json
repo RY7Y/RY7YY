@@ -50,13 +50,13 @@
     },
     {
       "name": "SSC 2",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/163_.m3u8?",
+      "url": "https://ssc2-ak.akamaized.net/out/v1/a16db2ec338a445a82d9c541cc9293f9/index.mpd",
       "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
     {
       "name": "SSC 3",
-      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/147_.m3u8?",
+      "url": "https://ssc3-ak.akamaized.net/out/v1/42e86125555242aaa2a12056832e7814/index.mpd",
       "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
       "category": "SSC"
     },
