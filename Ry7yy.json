@@ -1,0 +1,332 @@
+{
+  "channels": [
+    {
+      "name": "beIN SPORTS HD1",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/40_.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category": "BeIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD2",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/38_.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category": "BeIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD3",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/250_.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category": "BeIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD4",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/251_.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category":  "BeIN Sports"
+    },
+    {
+      "name": "beIN SPORTS HD5",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/251_.m3u8",
+      "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
+      "category": "BeIN Sports"
+    },
+    {
+      "name": "SSC 1",
+      "url": "https://stream.sainaertebat.com/hls2/ssc1.m3u8",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC 2",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/163_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC 3",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/147_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC 4",
+      "url": "https://https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/178_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC 5",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/179_.m3u8",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC Extra1",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/193_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "SSC Extra2",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/226_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
+      "category": "SSC"
+    },
+    {
+      "name": "ON Sports",
+      "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+      "logo": "3.png",
+      "category": "ON Sports"
+    },
+    {
+      "name": "السعودية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_tv/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/GRQTndk.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "السعودية الثانيه",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-ksa-now/71ed3aa814c643306c0a8bc4fcc7d17f/index.m3u8",
+      "logo": "https://i.imgur.com/sEOjApe.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "SBC",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-sbc/90e09c0c28db26435799b4a14892a167/index.m3u8",
+      "logo": "https://i.imgur.com/9JSQglj.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "ذكريات",
+      "url": "https://al-ekhbaria-prod-dub.shahid.net/out/v1/ef87956651694f4ba2ccc16e852dbb95/index.m3u8",
+      "logo": "https://i.imgur.com/AKa1X9d.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "الاخبارية",
+      "url": "https://cdn-globecast.akamaized.net/live/eds/al_ekhbariya/hls_roku/index.m3u8",
+      "logo": "https://i.imgur.com/WcRlHQm.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "القران الكريم",
+      "url": "http://m.live.net.sa:1935/live/quran/gmswf.m3u8",
+      "logo": "https://i.imgur.com/A2fJysM.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "السنة النبوية",
+      "url": "http://m.live.net.sa:1935/live/sunnah/playlist.m3u8",
+      "logo": "https://i.imgur.com/S6LcTJv.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "اقرا",
+      "url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv3/playlist.m3u8",
+      "logo": "https://i.imgur.com/HPVsIa4.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "الثقافية",
+      "url": "https://thaqafeyyah-ak.akamaized.net/out/v1/f6851f68ada94f82ae6b64a441eb5ab1/index.m3u8",
+      "logo": "https://i.imgur.com/juM3k8B.jpg",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "الحدث",
+      "url": "https://av.alarabiya.net/alarabiapublish/alhadath.smil/playlist.m3u8",
+      "logo": "https://i.imgur.com/De4SEWE.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "خليجي",
+      "url": "    https://shls-live-enc.edgenextcdn.net/out/v1/0afd546fcb5342f69d6bfff2dd1596e9/index_20.m3u8",
+      "logo": "https://jzu4.github.io/files/img/A06BD3B9-B28A-48B6-8691-44A8E6FA41CD.png",
+      "category": "Shahid"
+    },
+    {
+      "name": "باب الحارة",
+      "url": "https://shls-live-enc.edgenextcdn.net/out/v1/948c54279b594944adde578c95f1d7d1/index.m3u8",
+      "logo": "https://i.imgur.com/QtlnZbq.png",
+      "category": "Shahid"
+    },
+    {
+      "name": "MBC 1",
+      "url": "https://mbc1na-prod-dub-enc.edgenextcdn.net/out/v1/84ab37e99d6e4b16b33c6600f94f6ccb/index_6.m3u8",
+      "logo": "https://jzu4.github.io/files/img/C6630DD6-2DC8-4242-B800-38FB40DE2BA2.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC Drama",
+      "url": "https://mbc1-enc.edgenextcdn.net/out/v1/b0b3a0e6750d4408bb86d703d5feffd1/index_26.m3u8",
+      "logo": "https://jzu4.github.io/files/img/0F612822-AEA9-4991-AEBA-2D499CCBCC7D.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC 2",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/15_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/67EA83B3-87FC-4420-BED3-AD63F32A121B.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC MAX",
+      "url": "https://cdn1-europe.mgmlcdn.s-cloudflare.com:25463/xH5gc4mOg8vw4txxz36/13_.m3u8?",
+      "logo": "https://jzu4.github.io/files/img/5228017D-7762-4E67-BFDB-DB814961973B.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC 5",
+      "url": "https://mbc5-prod-dub-enc.edgenextcdn.net/out/v1/2720564b6a4641658fdfb6884b160da2/index_3.m3u8",
+      "logo": "https://jzu4.github.io/files/img/EEFB9732-6417-4C99-BE0D-F39C344A6D02.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC Masr",
+      "url": "https://shls-live-enc.edgenextcdn.net/out/v1/08eca926a78a41339b8010c882410307/index.m3u8",
+      "logo": "https://media0070.elcinema.com/tvguide/1399_1.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC Masr2",
+      "url": "https://shls-masr2-enc.edgenextcdn.net/out/v1/f683685242b549f48ea8a5171e3e993a/index_7.m3u8",
+      "logo": "https://media0070.elcinema.com/tvguide/1399_1.png",
+      "category": "MBC"
+    },
+    {
+      "name": "MBC Plus Drama",
+      "url": "https://mbcplusdrama-prod-dub-enc.edgenextcdn.net/out/v1/97ca0ce6fc6142f4b14c0a694af59eab/index.m3u8",
+      "logo": "https://i.imgur.com/lxWdjXG.png",
+      "category": "MBC"
+    },
+    {
+      "name": "رامز",
+      "url": "https://shls-live-enc.edgenextcdn.net/out/v1/0ef83323c0374a1187c182645db2a45f/index.m3u8",
+      "logo": "https://i.imgur.com/aCJeVSr.png",
+      "category": "Shahid"
+    },
+    {
+      "name": "الكأس 1",
+      "url": "https://liveakgr.alkassdigital.net/hls/live/2097037/Alkass1mhua/master540.m3u8",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الكأس 2",
+      "url": "https://liveakgrns.alkassdigital.net/hls/live/2097037/Alkass2hef/master.m3u8",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الكأس 3",
+      "url": "https://liveakgrns.alkassdigital.net/hls/live/2097037/Alkass3vak/master450.m3u8",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الكأس 4",
+      "url": "https://liveakgrns.alkassdigital.net/hls/live/2097037/Alkass4cna/master.m3u8?hdnts=exp=1745087816~hmac=7fc9dde9a9c284d979a714ac190781c5f518dd213fb88ecc6b131fdc0375075c",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الكأس 5",
+      "url": "https://liveakgrns.alkassdigital.net/hls/live/2097037/Alkass5nnha/master.m3u8?hdnts=exp=1745087578~hmac=1487fa77f6f245d6601e36f6b92cfdfb6771f67062159be28d906eb760d48eb4",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الكأس 6",
+      "url": "https://liveakgrns.alkassdigital.net/hls/live/2097037/Alkass6buzay/master.m3u8?hdnts=exp=1745087828~hmac=33b218e1deffc6ddcbf3ae8d94909bb8e232b594334e1316755299a44d6bdd7e",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الكأس 8",
+      "url": "https://liveakgrns.alkassdigital.net/hls/live/2097037/Alkass8hef/master.m3u8?hdnts=exp=1745087833~hmac=609a6a291b7032513972fe8b5fb76360ad02b9570c7c709501aa7680cc2650a3",
+      "logo": "https://jzu4.github.io/files/img/BC9A0963-3088-4828-9423-1D36C0E7AA3B.png",
+      "category": "alkass"
+    },
+    {
+      "name": "الامارات tv",
+      "url": "https://vo-live.cdb.cdn.orange.com/Content/Channel/EmiratesChannel/HLS/index.m3u8",
+      "logo": "https://i.imgur.com/OT6DW3E.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "ابو ظبي الاولى",
+      "url": "https://vo-live.cdb.cdn.orange.com/Content/Channel/AbuDhabiChannel/HLS/index.m3u8",
+      "logo": "https://i.imgur.com/g7IRorO.jpeg",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "ابو ظبي الرياضية 1",
+      "url": "https://vo-live-media.cdb.cdn.orange.com/Content/Channel/AbuDhabiSportsChannel1/HLS/index.m3u8",
+      "logo": "https://i.imgur.com/6BVWk8z.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "الضفرة",
+      "url": "https://rtmp-live-ingest-eu-west-3-universe-dacast-com.akamaized.net/transmuxv1/streams/dbb8ac05-a020-784c-3a95-6ed027941532.m3u8",
+      "logo": "https://i.imgur.com/sOMOe9t.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "العربية",
+      "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/al-arabiya/playlist.m3u8",
+      "logo": "https://i.imgur.com/NXFkYFj.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "دبي سبورت 1",
+      "url": "https://dmidspta.cdn.mgmlcdn.com/dubaisports/smil:dubaisports.stream.smil/chunklist.m3u8",
+      "logo": "https://i.imgur.com/Poxw8lG.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "دبي سبورت 2",
+      "url": "https://dmitwlvvll.cdn.mgmlcdn.com/dubaisportshd/smil:dubaisportshd.smil/chunklist.m3u8",
+      "logo": "https://i.imgur.com/PMJ7Zmo.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "دبي سبورت 3",
+      "url": "https://dmitwlvvll.cdn.mgmlcdn.com/dubaisportshd5/smil:dubaisportshd5.smil/chunklist.m3u8",
+      "logo": "https://i.imgur.com/U0A8Gex.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "دبي",
+      "url": "https://dmieigthvllta.cdn.mgmlcdn.com/dubaitvht/smil:dubaitv.stream.smil/chunklist.m3u8",
+      "logo": "https://i.imgur.com/wZMkKF7.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "ناشيونال جيوغرافيك أبوظبي",
+      "url": "https://vo-live.cdb.cdn.orange.com/Content/Channel/NationalGeographicHDChannel/HLS/index.m3u8",
+      "logo": "https://i.imgur.com/fNA00VF.png",
+      "category": "Arab Emirates"
+    },
+    {
+      "name": "ثمانية الاولى",
+      "url": "http://sportlo.live:8080/thmanyah-1/tracks-v1a1/mono.m3u8",
+      "logo": "https://jzu4.github.io/IMG_3500.png",
+      "category": "ثمانية"
+    },
+    {
+      "name": "ثمانية الثانيه",
+      "url": "http://sportlo.live:8080/thmanyah-2/tracks-v1a1/mono.m3u8",
+      "logo": "https://jzu4.github.io/IMG_3500.png",
+      "category": "ثمانية"
+    },
+    {
+      "name": "ثمانية الثالثه",
+      "url": "http://sportlo.live:8080/thmanyah-3/tracks-v1a1/mono.m3u8",
+      "logo": "https://jzu4.github.io/IMG_3500.png",
+      "category": "ثمانية"
+    },
+  ]
+}
+
+
+
+
