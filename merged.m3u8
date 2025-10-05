@@ -1,1 +1,7 @@
-.
+#EXTM3U
+#EXT-X-VERSION:5
+
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",NAME="Arabic",LANGUAGE="ar",DEFAULT=YES,AUTOSELECT=YES,URI="https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/manifest/audio/96kbps/audio.m3u8"
+
+#EXT-X-STREAM-INF:BANDWIDTH=700000,RESOLUTION=512x288,CODECS="avc1.4d401f,mp4a.40.2",AUDIO="audio"
+https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/manifest/video/288p350kbps/video.m3u8
