@@ -212,7 +212,7 @@
     },
     {
       "name": "MBC Plus Drama",
-      "url": "https://mbcplusdrama-prod-dub-enc.edgenextcdn.net/out/v1/97ca0ce6fc6142f4b14c0a694af59eab/index.m3u8",
+      "url": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-plus-drama/e37251ec2aac8f6c98f75cd0fa37cd28/manifest/video/1080p2400kbps/video.m3u8",
       "logo": "https://i.imgur.com/lxWdjXG.png",
       "category": "MBC"
     },
