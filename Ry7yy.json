@@ -42,7 +42,7 @@
       "logo": "https://jzu4.github.io/files/img/IMG_6703.png",
       "category": "BeIN Sports"
     },
-    {
+     {
       "name": "SSC 1",
       "url": "https://ssc1-ak.akamaized.net/out/v1/c696e4819b55414388a1a487e8a45ca1/index.mpd",
       "logo": "https://jzu4.github.io/files/img/504D5767-2196-4154-8F97-58961653DCB7.png",
@@ -88,6 +88,12 @@
       "name": "السعودية",
       "url": "https://cdn-globecast.akamaized.net/live/eds/saudi_tv/hls_roku/index.m3u8",
       "logo": "https://i.imgur.com/GRQTndk.png",
+      "category": "Saudi Arabia"
+    },
+    {
+      "name": "عزنا بطبعنا",
+      "url": "https://shls-live-enc.edgenextcdn.net/out/v1/07a6ab2d57b2453a91bbdd2d46b5865a/index.m3u8",
+      "logo": "https://i.imgur.com/GRQTndMB.png",
       "category": "Saudi Arabia"
     },
     {
