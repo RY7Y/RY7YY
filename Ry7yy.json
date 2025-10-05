@@ -212,7 +212,7 @@
     },
     {
       "name": "MBC Plus Drama",
-      "url": "https://b075428d05b24d51b953c3926e74ea51.mediatailor.eu-west-1.amazonaws.com/v1/manifest/065e37dd36f6dc7043679a61592f17340f3617b6/shahid-media-prod-live-apps-hls/5f0a0fde-d8cd-421f-bd2e-de05082da77a/4.m3u8",
+      "url": "https://b075428d05b24d51b953c3926e74ea51.mediatailor.eu-west-1.amazonaws.com/v1/master/065e37dd36f6dc7043679a61592f17340f3617b6/shahid-media-prod-live-apps-hls/out/v1/08eca926a78a41339b8010c882410307/index.m3u8",
       "logo": "https://i.imgur.com/lxWdjXG.png",
       "category": "MBC"
     },
